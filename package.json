@@ -1,0 +1,14 @@
+{
+  "name": "blog.fakturaonline.cz",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@ilrock/gridsome-source-prismic": "^1.0.4",
+    "dotenv": "^8.2.0",
+    "gridsome": "^0.7.13"
+  }
+}
