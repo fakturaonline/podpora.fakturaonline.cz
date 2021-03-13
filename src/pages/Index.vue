@@ -1,17 +1,35 @@
 <template>
   <Layout>
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    <div class="posts--container">
-      <div
-        v-for="(post, index) in posts"
-        :key="index"
-        class="post--card"
-        @click="$router.push(`/posts/${post.id}`)"
-      >
-        <img :src="post.data.featured_image.url" />
-        <div class="post--header">{{ post.data.title }}</div>
-      </div>
-    </div>
+    <b-jumbotron>
+      <template #header>
+        <b-container>
+          BootstrapVue
+        </b-container>
+      </template>
+
+      <template #lead>
+        <b-container>
+          This is a simple hero unit, a simple jumbotron-style component for
+          calling extra attention to featured content or information.
+        </b-container>
+      </template>
+
+      <b-container>
+        <p>For more information visit website</p>
+        <b-button variant="primary" href="#">More Info</b-button>
+      </b-container>
+    </b-jumbotron>
+
+    <b-container>
+      <b-row>
+        <b-col cols="4" v-for="(post, index) in posts" :key="index">
+          <a href="#" @click="$router.push(`/posts/${post.id}`)">
+            <img :src="post.data.featured_image.url" class="img-fluid" />
+            <div class="post--header">{{ post.data.title }}</div>
+          </a>
+        </b-col>
+      </b-row>
+    </b-container>
   </Layout>
 </template>
 
@@ -33,36 +51,8 @@ export default {
 };
 </script>
 
-<style scoped>
-.posts--container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+<style scoped></style>
 
-.post--card {
-  width: 300px;
-  cursor: pointer;
-  border-radius: 10px;
-  -webkit-box-shadow: -4px 40px 53px -7px rgba(224, 215, 224, 1);
-  -moz-box-shadow: -4px 40px 53px -7px rgba(224, 215, 224, 1);
-  box-shadow: -4px 40px 53px -7px rgba(224, 215, 224, 1);
-  margin-bottom: 30px;
-}
-
-.post--card img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.post--card .post--header {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>
 <page-query>
 query Post {
   posts: allPrismicPost(filter: { tags: { contains: ["Featured"] }}) {
