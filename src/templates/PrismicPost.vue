@@ -4,8 +4,6 @@
     <img :src="post.data.featured_image.url" />
     <div v-html="post.data.perex"></div>
     <div v-html="post.data.author"></div>
-    <div v-html="post.data.timeread"></div>
-    <!-- <div v-html="post.data.body"></div> -->
     <slices-block :slices="post.data.body" />
   </layout>
 </template>
@@ -37,7 +35,6 @@ img {
       data {
           title
           author
-          timeread
           perex
           featured_image {
             url

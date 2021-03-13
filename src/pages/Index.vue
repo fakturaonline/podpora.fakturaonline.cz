@@ -21,31 +21,26 @@
     </b-jumbotron>
 
     <b-container>
-      <b-row>
-        <b-col cols="4" v-for="(post, index) in posts" :key="index">
-          <a href="#" @click="$router.push(`/posts/${post.id}`)">
-            <img :src="post.data.featured_image.url" class="img-fluid" />
-            <div class="post--header">{{ post.data.title }}</div>
-          </a>
-        </b-col>
-      </b-row>
+      <PostCollection :posts="posts" />
+      <h2>Latest</h2>
+      <PostCollection :posts="latest" />
     </b-container>
   </Layout>
 </template>
 
 <script>
+import PostCollection from "~/components/PostCollection.vue";
+
 export default {
+  components: {
+    PostCollection
+  },
   computed: {
     posts() {
-      const nodes = this.$page.posts.edges.map(e => e.node);
-
-      return nodes.map(node => {
-        const { body, ...remainingObject } = node.data;
-        return {
-          id: node.id,
-          data: { ...remainingObject, body: JSON.parse(body) }
-        };
-      });
+      return this.$page.posts.edges.map(e => e.node);
+    },
+    latest() {
+      return this.$page.latest.edges.map(e => e.node);
     }
   }
 };
@@ -62,16 +57,32 @@ query Post {
         data {
           title
           author
-          timeread
           perex
           featured_image {
             url
           }
-          body
         }
 
       }
     }
   }
+    latest: allPrismicPost(sortBy: "date", order: DESC, limit: 10) {
+      edges {
+        node {
+          id,
+          data {
+            title
+            author
+            date
+            perex
+            featured_image {
+              url
+            }
+          }
+
+        }
+      }
+    }
+
 }
 </page-query>

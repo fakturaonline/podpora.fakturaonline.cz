@@ -9,6 +9,20 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 
 // Then add it to export function
 
+const transforSlicesMixin = {
+  methods: {
+    transforSlices(slices) {
+      return slices.map(node => {
+        const { body, ...remainingObject } = node.data;
+        return {
+          id: node.id,
+          data: { ...remainingObject, body: JSON.parse(body) }
+        };
+      });
+    }
+  }
+};
+
 export default function(Vue) {
   Vue.component("Layout", DefaultLayout);
 
@@ -17,6 +31,8 @@ export default function(Vue) {
   Vue.prototype.$prismic = {
     linkResolver() {}
   };
+
+  Vue.mixin(transforSlicesMixin);
 
   Object.entries(common).forEach(([_, component]) => {
     Vue.component(component.name, component);

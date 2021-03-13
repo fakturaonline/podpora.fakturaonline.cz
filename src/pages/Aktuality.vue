@@ -35,7 +35,6 @@ query Post {
         data {
           title
           author
-          timeread
           perex
           featured_image {
             url
