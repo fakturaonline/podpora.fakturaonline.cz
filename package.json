@@ -7,7 +7,9 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@gridsome/transformer-json": "^0.2.1",
     "@ilrock/gridsome-source-prismic": "^1.0.4",
+    "@prismicio/vue": "^2.0.11",
     "dotenv": "^8.2.0",
     "gridsome": "^0.7.13"
   }

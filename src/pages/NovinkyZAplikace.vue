@@ -19,15 +19,7 @@
 export default {
   computed: {
     posts() {
-      const nodes = this.$page.posts.edges.map(e => e.node);
-
-      return nodes.map(node => {
-        const { body, ...remainingObject } = node.data;
-        return {
-          id: node.id,
-          data: { ...remainingObject, body: JSON.parse(body) }
-        };
-      });
+      return this.$page.posts.edges.map(e => e.node);
     }
   }
 };
@@ -65,7 +57,7 @@ export default {
 </style>
 <page-query>
 query Post {
-  posts: allPrismicPost(filter: { tags: { contains: ["Featured"] }}) {
+  posts: allPrismicPost(filter: { tags: { contains: ["Novinky z aplikace"] }}) {
     edges {
       node {
         id,
