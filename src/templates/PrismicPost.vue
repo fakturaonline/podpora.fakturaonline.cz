@@ -1,16 +1,22 @@
 <template>
   <Layout>
+    <b-jumbotron class="mb-4 light-blue" lead-tag="div">
+      <template #lead>
+        <b-container>
+          <b-row>
+            <b-col>
+              <h1 class="featured--header">{{ post.data.title }}</h1>
+              <p class="post--perex" v-html="post.data.perex" />
+            </b-col>
+            <b-col>
+              <img :src="post.data.featured_image.url" class="img-fluid" />
+            </b-col>
+          </b-row>
+        </b-container>
+      </template>
+    </b-jumbotron>
+
     <b-container>
-      <b-row>
-        <b-col>
-          <h1>{{ post.data.title }}</h1>
-          <div v-html="post.data.perex"></div>
-          <div v-html="post.data.author"></div>
-        </b-col>
-        <b-col>
-          <img :src="post.data.featured_image.url" />
-        </b-col>
-      </b-row>
       <slices-block :slices="post.data.body" />
     </b-container>
   </Layout>
@@ -37,6 +43,10 @@ export default {
 <style scoped>
 img {
   width: 100%;
+}
+
+.light-blue {
+  background-color: #f4f9fb;
 }
 </style>
 <page-query>

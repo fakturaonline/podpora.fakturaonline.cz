@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <b-jumbotron>
+    <b-jumbotron lead-tag="div">
       <template #lead>
         <b-container>
           <b-row>
