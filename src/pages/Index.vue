@@ -6,15 +6,15 @@
           <b-row>
             <b-col>
               <h1 class="featured--header">{{ featured.data.title }}</h1>
-              <p class="featured--perex">{{ featured.data.perex }}</p>
+              <p class="featured--perex" v-html="featured.data.perex" />
             </b-col>
             <b-col>
-              <a href="#" @click="$router.push(`/articles/${featured.id}`)">
+              <g-link :to="`/articles/${featured.id}`">
                 <img
                   :src="featured.data.featured_image.url"
                   class="img-fluid"
                 />
-              </a>
+              </g-link>
             </b-col>
           </b-row>
         </b-container>

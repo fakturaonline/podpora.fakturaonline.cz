@@ -1,9 +1,9 @@
 <template>
   <b-row>
     <b-col cols="4" v-for="(post, index) in posts" :key="index">
-      <a href="#" @click="$router.push(`/articles/${post.id}`)">
+      <g-link :to="`/articles/${post.id}`">
         <img :src="post.data.featured_image.url" class="img-fluid mb-4" />
-      </a>
+      </g-link>
       <div class="post--header">{{ post.data.title }}</div>
       <p class="post--perex">{{ post.data.perex }}</p>
       <p class="post--author">{{ post.data.author }}</p>
