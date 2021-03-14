@@ -11,6 +11,9 @@
 import PostCollection from "~/components/PostCollection.vue";
 
 export default {
+  metaInfo: {
+    title: "Novinky z aplikace"
+  },
   components: {
     PostCollection
   },
@@ -39,7 +42,6 @@ query Post {
           }
           body
         }
-
       }
     }
   }

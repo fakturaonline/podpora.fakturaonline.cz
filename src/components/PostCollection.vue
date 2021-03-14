@@ -6,14 +6,19 @@
       </g-link>
       <div class="font-weight-bold">{{ post.data.title }}</div>
       <p class="post--perex">{{ post.data.perex }}</p>
-      <p class="post--author">{{ post.data.author }}</p>
+      <PostInfo :post="post" />
     </b-col>
   </b-row>
 </template>
 
 <script>
+import PostInfo from "~/components/PostInfo.vue";
+
 export default {
   props: ["posts"],
-  name: "post-collection"
+  name: "post-collection",
+  components: {
+    PostInfo
+  }
 };
 </script>

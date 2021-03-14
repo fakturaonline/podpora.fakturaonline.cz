@@ -7,6 +7,7 @@
             <b-col>
               <h1 class="featured--header">{{ featured.data.title }}</h1>
               <p class="featured--perex" v-html="featured.data.perex" />
+              <PostInfo :post="featured" />
             </b-col>
             <b-col>
               <g-link :to="`/articles/${featured.id}`">
@@ -24,23 +25,31 @@
     <b-container>
       <b-row>
         <b-col>
-          <a class="h3 mb-3 d-block" :href="$url('/aktuality')">Aktuality</a>
+          <a class="h3 mb-3 d-block" :href="$url('/aktuality')"
+            >Aktuality
+            <g-image alt="Example image" src="~/chevron-right.svg" />
+          </a>
           <FirstPostFromCategory :posts="last_from_news_aktuality" />
         </b-col>
         <b-col>
           <a class="h3 mb-3 d-block" :href="$url('/novinky-z-aplikace')"
-            >Novinky z aplikace</a
-          >
+            >Novinky z aplikace
+            <g-image alt="Example image" src="~/chevron-right.svg" />
+          </a>
           <FirstPostFromCategory :posts="last_from_news_from_app" />
         </b-col>
         <b-col>
           <a class="h3 mb-3 d-block" :href="$url('/tipy-a-navody')"
-            >Tipy a návody</a
-          >
+            >Tipy a návody
+            <g-image alt="Example image" src="~/chevron-right.svg" />
+          </a>
           <FirstPostFromCategory :posts="last_from_tuts" />
         </b-col>
         <b-col>
-          <a class="h3 mb-3 d-block" :href="$url('/ostatni')">Ostatní</a>
+          <a class="h3 mb-3 d-block" :href="$url('/ostatni')"
+            >Ostatní
+            <g-image alt="Example image" src="~/chevron-right.svg" />
+          </a>
           <FirstPostFromCategory :posts="last_from_others" />
         </b-col>
       </b-row>
@@ -56,10 +65,15 @@
 <script>
 import PostCollection from "~/components/PostCollection.vue";
 import FirstPostFromCategory from "~/components/FirstPostFromCategory.vue";
+import PostInfo from "~/components/PostInfo.vue";
 
 export default {
+  metaInfo: {
+    title: "Blog"
+  },
   components: {
     PostCollection,
+    PostInfo,
     FirstPostFromCategory
   },
   computed: {
@@ -181,7 +195,6 @@ query Post {
             url
           }
         }
-
       }
     }
   }

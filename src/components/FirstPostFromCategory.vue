@@ -6,7 +6,6 @@
       </g-link>
       <div class="font-weight-bold">{{ post.data.title }}</div>
       <p class="post--perex">{{ post.data.perex }}</p>
-      <p class="post--author">{{ post.data.author }}</p>
     </div>
   </div>
 </template>

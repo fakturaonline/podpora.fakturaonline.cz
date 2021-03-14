@@ -9,6 +9,7 @@
   "dependencies": {
     "@prismicio/vue": "^2.0.11",
     "bootstrap": "^4.6.0",
+    "bootstrap-icons": "^1.4.0",
     "bootstrap-vue": "^2.21.2",
     "dotenv": "^8.2.0",
     "gridsome": "^0.7.13",
@@ -18,5 +19,9 @@
     "vue": "^2.6.12",
     "vue-server-renderer": "^2.6.12",
     "vue-template-compiler": "^2.6.12"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1"
   }
 }

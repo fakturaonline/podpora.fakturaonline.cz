@@ -1,4 +1,8 @@
 module.exports = {
+  siteName: "FakturaOnline",
+  siteDescription:
+    "Všechny novinky ze světa financí a fakturování na jednom místě",
+  siteUrl: "https://blog.fakturaonline.cz",
   templates: {
     PrismicPost: "/articles/:slug"
   },

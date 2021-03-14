@@ -7,6 +7,7 @@
             <b-col>
               <h1 class="featured--header">{{ post.data.title }}</h1>
               <p class="post--perex" v-html="post.data.perex" />
+              <PostInfo :post="post" />
             </b-col>
             <b-col>
               <img :src="post.data.featured_image.url" class="img-fluid" />
@@ -24,9 +25,24 @@
 
 <script>
 import SlicesBlock from "~/components/SlicesBlock.vue";
+import PostInfo from "~/components/PostInfo.vue";
 export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.data.title,
+      meta: [
+        { name: "description", content: this.$page.post.data.perex },
+        { property: "og:title", content: this.$page.post.data.title },
+        { property: "og:site_name", content: "Blog.FakturaOnline" },
+        { property: "og:type", content: "website" },
+        { name: "robots", content: "index,follow" },
+        { name: "author", content: this.$page.post.data.author }
+      ]
+    };
+  },
   components: {
-    SlicesBlock
+    SlicesBlock,
+    PostInfo
   },
   computed: {
     post() {
