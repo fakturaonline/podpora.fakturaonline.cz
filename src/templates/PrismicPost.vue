@@ -35,6 +35,10 @@ export default {
         { property: "og:title", content: this.$page.post.data.title },
         { property: "og:site_name", content: "Blog.FakturaOnline" },
         { property: "og:type", content: "website" },
+        {
+          property: "og:image",
+          content: this.$page.post.data.featured_image.url
+        },
         { name: "robots", content: "index,follow" },
         { name: "author", content: this.$page.post.data.author }
       ]
