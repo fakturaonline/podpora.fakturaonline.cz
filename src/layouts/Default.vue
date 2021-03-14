@@ -45,7 +45,7 @@
 
     <slot />
     <hr />
-    <footer class="text-muted">
+    <footer class="text-muted mt-5 mb-5">
       <div class="container">
         <p class="float-right">
           <small>© 2021 FakturaOnline s.r.o. Všechna práva vyhrazena</small>
@@ -54,5 +54,3 @@
     </footer>
   </div>
 </template>
-
-<style></style>

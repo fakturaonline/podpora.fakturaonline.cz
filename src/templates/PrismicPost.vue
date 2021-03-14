@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <b-jumbotron class="mb-4 light-blue" lead-tag="div">
+    <b-jumbotron class="mb-5 light-blue" lead-tag="div">
       <template #lead>
         <b-container>
           <b-row>
@@ -49,6 +49,7 @@ img {
   background-color: #f4f9fb;
 }
 </style>
+
 <page-query>
   query PrismicPost ($id: ID!) {
     post: prismicPost (id: $id) {

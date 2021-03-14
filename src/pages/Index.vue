@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <b-jumbotron lead-tag="div">
+    <b-jumbotron class="mb-5 light-blue" lead-tag="div">
       <template #lead>
         <b-container>
           <b-row>
@@ -85,7 +85,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.light-blue {
+  background-color: #f4f9fb;
+}
+</style>
 
 <page-query>
 query Post {

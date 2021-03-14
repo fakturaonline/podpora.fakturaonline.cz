@@ -4,7 +4,7 @@
       <g-link :to="`/articles/${post.id}`">
         <img :src="post.data.featured_image.url" class="img-fluid mb-4" />
       </g-link>
-      <div class="post--header">{{ post.data.title }}</div>
+      <div class="font-weight-bold">{{ post.data.title }}</div>
       <p class="post--perex">{{ post.data.perex }}</p>
       <p class="post--author">{{ post.data.author }}</p>
     </b-col>
