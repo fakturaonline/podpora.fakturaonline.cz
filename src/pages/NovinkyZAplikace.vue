@@ -1,21 +1,19 @@
 <template>
   <Layout>
-    <div class="posts--container">
-      <div
-        v-for="(post, index) in posts"
-        :key="index"
-        class="post--card"
-        @click="$router.push(`/posts/${post.id}`)"
-      >
-        <img :src="post.data.featured_image.url" />
-        <div class="post--header">{{ post.data.title }}</div>
-      </div>
-    </div>
+    <b-container>
+      <h1>Novinky z aplikace</h1>
+      <PostCollection :posts="posts" />
+    </b-container>
   </Layout>
 </template>
 
 <script>
+import PostCollection from "~/components/PostCollection.vue";
+
 export default {
+  components: {
+    PostCollection
+  },
   computed: {
     posts() {
       return this.$page.posts.edges.map(e => e.node);

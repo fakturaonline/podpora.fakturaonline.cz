@@ -16,6 +16,7 @@
     "prismic-dom": "^2.2.5",
     "prismic-javascript": "^3.0.2",
     "vue": "^2.6.12",
+    "vue-server-renderer": "^2.6.12",
     "vue-template-compiler": "^2.6.12"
   }
 }

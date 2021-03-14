@@ -1,8 +1,14 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="light">
-      <b-container class="bv-example-row">
-        <b-navbar-brand href="#">
+    <b-navbar
+      toggleable="lg"
+      type="light"
+      variant="white"
+      :sticky="true"
+      class="shadow-sm"
+    >
+      <b-container>
+        <b-navbar-brand href="/">
           <g-image alt="Example image" src="~/logo-navbar.jpg" />
         </b-navbar-brand>
 
@@ -10,8 +16,14 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="#">Link</b-nav-item>
-            <b-nav-item href="#" disabled>Disabled</b-nav-item>
+            <b-nav-item :href="$url('/aktuality')">Aktuality</b-nav-item>
+            <b-nav-item :href="$url('/novinky-z-aplikace')"
+              >Novinky z aplikace</b-nav-item
+            >
+            <b-nav-item :href="$url('/tipy-a-navody')"
+              >Tipy a návody</b-nav-item
+            >
+            <b-nav-item :href="$url('/ostatni')">Ostatní</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
@@ -31,30 +43,15 @@
       </b-container>
     </b-navbar>
 
-    <!-- <b-container class="bv-example-row">
-    <header class="header">
-      <strong>
-        <g-link to="/">
-        </g-link>
-      </strong>
-      <b-nav>
-        <b-nav-item active>Active</b-nav-item>
-        <b-nav-item>Link</b-nav-item>
-        <b-nav-item>Another Link</b-nav-item>
-        <b-nav-item disabled>Disabled</b-nav-item>
-      </b-nav>
-
-      <!-- <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/aktuality">Aktuality</g-link>
-        <g-link class="nav__link" to="/novinky-z-aplikace"
-          >Novinky z aplikace</g-link
-        >
-        <g-link class="nav__link" to="/tipy-a-navody">Tipy a návody </g-link>
-      </nav>
-    </header>
-    </b-container> -->
     <slot />
+    <hr />
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <small>© 2021 FakturaOnline s.r.o. Všechna práva vyhrazena</small>
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 

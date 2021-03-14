@@ -1,6 +1,6 @@
 module.exports = {
   templates: {
-    PrismicPost: "/posts/:slug"
+    PrismicPost: "/articles/:slug"
   },
   plugins: [
     {

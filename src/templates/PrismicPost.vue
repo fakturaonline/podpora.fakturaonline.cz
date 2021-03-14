@@ -1,12 +1,21 @@
 <template>
-  <layout>
-    <h1>{{ post.data.title }}</h1>
-    <img :src="post.data.featured_image.url" />
-    <div v-html="post.data.perex"></div>
-    <div v-html="post.data.author"></div>
-    <slices-block :slices="post.data.body" />
-  </layout>
+  <Layout>
+    <b-container>
+      <b-row>
+        <b-col>
+          <h1>{{ post.data.title }}</h1>
+          <div v-html="post.data.perex"></div>
+          <div v-html="post.data.author"></div>
+        </b-col>
+        <b-col>
+          <img :src="post.data.featured_image.url" />
+        </b-col>
+      </b-row>
+      <slices-block :slices="post.data.body" />
+    </b-container>
+  </Layout>
 </template>
+
 <script>
 import SlicesBlock from "~/components/SlicesBlock.vue";
 export default {
@@ -24,6 +33,7 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 img {
   width: 100%;

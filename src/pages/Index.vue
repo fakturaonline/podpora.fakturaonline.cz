@@ -1,28 +1,53 @@
 <template>
   <Layout>
     <b-jumbotron>
-      <template #header>
-        <b-container>
-          BootstrapVue
-        </b-container>
-      </template>
-
       <template #lead>
         <b-container>
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          <b-row>
+            <b-col>
+              <h1 class="featured--header">{{ featured.data.title }}</h1>
+              <p class="featured--perex">{{ featured.data.perex }}</p>
+            </b-col>
+            <b-col>
+              <a href="#" @click="$router.push(`/articles/${featured.id}`)">
+                <img
+                  :src="featured.data.featured_image.url"
+                  class="img-fluid"
+                />
+              </a>
+            </b-col>
+          </b-row>
         </b-container>
       </template>
-
-      <b-container>
-        <p>For more information visit website</p>
-        <b-button variant="primary" href="#">More Info</b-button>
-      </b-container>
     </b-jumbotron>
 
     <b-container>
-      <PostCollection :posts="posts" />
-      <h2>Latest</h2>
+      <b-row>
+        <b-col>
+          <a class="h3 mb-3 d-block" :href="$url('/aktuality')">Aktuality</a>
+          <FirstPostFromCategory :posts="last_from_news_aktuality" />
+        </b-col>
+        <b-col>
+          <a class="h3 mb-3 d-block" :href="$url('/novinky-z-aplikace')"
+            >Novinky z aplikace</a
+          >
+          <FirstPostFromCategory :posts="last_from_news_from_app" />
+        </b-col>
+        <b-col>
+          <a class="h3 mb-3 d-block" :href="$url('/tipy-a-navody')"
+            >Tipy a návody</a
+          >
+          <FirstPostFromCategory :posts="last_from_tuts" />
+        </b-col>
+        <b-col>
+          <a class="h3 mb-3 d-block" :href="$url('/ostatni')">Ostatní</a>
+          <FirstPostFromCategory :posts="last_from_others" />
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container>
+      <hr />
+      <h2 class="mb-3 d-block">Nejnovější články</h2>
       <PostCollection :posts="latest" />
     </b-container>
   </Layout>
@@ -30,17 +55,31 @@
 
 <script>
 import PostCollection from "~/components/PostCollection.vue";
+import FirstPostFromCategory from "~/components/FirstPostFromCategory.vue";
 
 export default {
   components: {
-    PostCollection
+    PostCollection,
+    FirstPostFromCategory
   },
   computed: {
-    posts() {
-      return this.$page.posts.edges.map(e => e.node);
+    featured() {
+      return this.$page.featured.edges.map(e => e.node)[0];
     },
     latest() {
       return this.$page.latest.edges.map(e => e.node);
+    },
+    last_from_news_from_app() {
+      return this.$page.last_from_news_from_app.edges.map(e => e.node);
+    },
+    last_from_news_aktuality() {
+      return this.$page.last_from_news_aktuality.edges.map(e => e.node);
+    },
+    last_from_others() {
+      return this.$page.last_from_others.edges.map(e => e.node);
+    },
+    last_from_tuts() {
+      return this.$page.last_from_tuts.edges.map(e => e.node);
     }
   }
 };
@@ -50,7 +89,7 @@ export default {
 
 <page-query>
 query Post {
-  posts: allPrismicPost(filter: { tags: { contains: ["Featured"] }}) {
+  last_from_news_from_app: allPrismicPost(filter: { tags: { contains: ["Novinky z aplikace"] }}, order: DESC, limit: 1) {
     edges {
       node {
         id,
@@ -62,27 +101,85 @@ query Post {
             url
           }
         }
+      }
+    }
+  }
+  last_from_news_aktuality: allPrismicPost(filter: { tags: { contains: ["Aktuality"] }}, order: DESC, limit: 1) {
+    edges {
+      node {
+        id,
+        data {
+          title
+          author
+          perex
+          featured_image {
+            url
+          }
+        }
+      }
+    }
+  }
+  last_from_others: allPrismicPost(filter: { tags: { contains: ["Ostatní"] }}, order: DESC, limit: 1) {
+    edges {
+      node {
+        id,
+        data {
+          title
+          author
+          perex
+          featured_image {
+            url
+          }
+        }
+      }
+    }
+  }
+  last_from_tuts: allPrismicPost(filter: { tags: { contains: ["Tipy a návody"] }}, order: DESC, limit: 1) {
+    edges {
+      node {
+        id,
+        data {
+          title
+          author
+          perex
+          featured_image {
+            url
+          }
+        }
+      }
+    }
+  }
+  featured: allPrismicPost(filter: { tags: { contains: ["Featured"] }}, order: DESC, limit: 1) {
+    edges {
+      node {
+        id,
+        data {
+          title
+          author
+          perex
+          featured_image {
+            url
+          }
+        }
+      }
+    }
+  }
+  latest: allPrismicPost(sortBy: "date", order: DESC, limit: 10) {
+    edges {
+      node {
+        id,
+        data {
+          title
+          author
+          date
+          perex
+          featured_image {
+            url
+          }
+        }
 
       }
     }
   }
-    latest: allPrismicPost(sortBy: "date", order: DESC, limit: 10) {
-      edges {
-        node {
-          id,
-          data {
-            title
-            author
-            date
-            perex
-            featured_image {
-              url
-            }
-          }
-
-        }
-      }
-    }
-
 }
 </page-query>
