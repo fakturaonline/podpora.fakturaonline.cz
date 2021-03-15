@@ -4,6 +4,7 @@
 
 $body-color: $gray-700;
 $link-color: $gray-700;
+$headings-color: $gray-900;
 $link-hover-color: darken($link-color, 15%) !default;
 $font-family-sans-serif: "Roboto";
 @import "bootstrap/scss/bootstrap";
@@ -129,4 +130,9 @@ footer {
 .post--perex a:hover {
   text-decoration: none;
   color: $body-color;
+}
+
+.h3,
+.post-title {
+  color: $black;
 }
