@@ -29,7 +29,7 @@ export default {
 
 <page-query>
 query Post {
-  posts: allPrismicPost(filter: { tags: { contains: ["Tipy a návody"] }}) {
+  posts: allPrismicPost(filter: { tags: { contains: ["Tipy a návody"] }}, sortBy: "data.date", order: DESC) {
     edges {
       node {
         path,
