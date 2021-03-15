@@ -9,7 +9,7 @@
     >
       <b-container>
         <b-navbar-brand href="/">
-          <g-image alt="Example image" src="~/logo-navbar.jpg" />
+          <g-image alt="Example image" src="~/logo-fo.svg" width="200" />
         </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
