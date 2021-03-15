@@ -1,7 +1,8 @@
 <template>
   <b-row>
     <b-col
-      cols="4"
+      md="6"
+      sm="auto"
       v-for="(post, index) in posts"
       :key="index"
       class="article-box"

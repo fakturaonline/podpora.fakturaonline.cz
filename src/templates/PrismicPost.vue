@@ -4,13 +4,13 @@
       <template #lead>
         <b-container>
           <b-row>
-            <b-col>
+            <b-col sm="auto" lg="6">
               <h1 class="featured--header">{{ post.data.title }}</h1>
               <p class="post--perex" v-html="post.data.perex" />
               <PostTags :post="$page.post" />
               <PostInfo :post="$page.post" />
             </b-col>
-            <b-col>
+            <b-col sm="auto" lg="6">
               <img :src="post.data.featured_image.url" class="img-fluid" />
             </b-col>
           </b-row>
