@@ -3,6 +3,7 @@ import DefaultLayout from "~/layouts/Default.vue";
 import { common } from "@prismicio/vue/components";
 
 import BootstrapVue from "bootstrap-vue";
+import format from "date-fns/format";
 
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
@@ -25,6 +26,13 @@ const transforSlicesMixin = {
 };
 
 export default function(Vue, { head }) {
+  Vue.filter("formatDate", value => {
+    if (value) {
+      return format(new Date(value), "dd.MM.yyyy");
+    }
+    return "";
+  });
+
   head.link.push({
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Roboto"

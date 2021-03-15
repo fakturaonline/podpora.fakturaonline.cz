@@ -1,7 +1,7 @@
 <template>
   <small class="text-muted"
-    >Od {{ post.data.author }} | {{ post.data.date }} | {{ readingTime }} min
-    čtení</small
+    >Od {{ post.data.author }} | {{ post.data.date | formatDate }} |
+    {{ readingTime }} min čtení</small
   >
 </template>
 
