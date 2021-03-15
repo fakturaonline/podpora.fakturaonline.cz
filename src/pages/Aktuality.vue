@@ -36,6 +36,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           perex
           featured_image {

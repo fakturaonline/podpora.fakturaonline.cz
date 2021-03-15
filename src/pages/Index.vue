@@ -121,6 +121,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           body
           perex
@@ -138,6 +139,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           body
           perex
@@ -155,6 +157,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           body
           perex
@@ -172,6 +175,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           body
           perex
@@ -189,6 +193,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           body
           perex
@@ -206,6 +211,7 @@ query Post {
         tags,
         data {
           title
+          date
           author
           date
           body
