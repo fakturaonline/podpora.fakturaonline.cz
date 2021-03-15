@@ -28,17 +28,17 @@
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
-            <b-nav-form>
+            <b-input-group>
               <b-form-input
-                size="sm"
-                class="mr-sm-2 search-box"
-                placeholder=""
+                placeholder="Zadejte hledanvý výraz"
                 v-model="searchTerm"
-              ></b-form-input>
-              <b-button size="sm" class="btn btn-light search-box-button">
+                class="search-box"
+              >
+              </b-form-input>
+              <b-input-group-prepend class="search-box-button">
                 <g-image alt="Search" src="~/search.svg" />
-              </b-button>
-            </b-nav-form>
+              </b-input-group-prepend>
+            </b-input-group>
           </b-navbar-nav>
         </b-collapse>
       </b-container>

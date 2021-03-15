@@ -138,8 +138,13 @@ footer {
 }
 
 .search-box {
-  border-radius: 20px;
+  border-radius: 20px !important;
+  padding-right: 50px;
+  padding-left: 20px;
+  background: transparent !important;
 }
 .search-box-button {
-  border-radius: 20px;
+  position: absolute;
+  right: 15px;
+  top: 12px;
 }
