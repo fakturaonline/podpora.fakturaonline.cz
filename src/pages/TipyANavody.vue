@@ -33,6 +33,7 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author

@@ -24,7 +24,12 @@ const transforSlicesMixin = {
   }
 };
 
-export default function(Vue) {
+export default function(Vue, { head }) {
+  head.link.push({
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Roboto"
+  });
+
   Vue.component("Layout", DefaultLayout);
 
   Vue.use(BootstrapVue);

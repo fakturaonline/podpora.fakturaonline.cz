@@ -1,3 +1,11 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";
+
+$body-color: $gray-700;
+$link-color: $gray-700;
+$link-hover-color: darken($link-color, 15%) !default;
+$font-family-sans-serif: "Roboto";
 @import "bootstrap/scss/bootstrap";
 
 html,
@@ -17,6 +25,7 @@ footer {
   flex-shrink: 0;
   background: white;
   padding: 40px 0;
+  margin-top: 40px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   color: #626262;
@@ -98,6 +107,26 @@ footer {
   margin-bottom: 0;
 }
 
-.dropdown__flag {
-  width: 14px;
+.article-box {
+  padding-bottom: 2.5rem;
+}
+
+.post-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.category-title {
+  color: #495057;
+}
+
+.article-body-detail {
+  img {
+    max-width: 100%;
+  }
+}
+
+.post--perex a:hover {
+  text-decoration: none;
+  color: $body-color;
 }

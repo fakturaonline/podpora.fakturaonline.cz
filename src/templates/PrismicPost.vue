@@ -7,7 +7,8 @@
             <b-col>
               <h1 class="featured--header">{{ post.data.title }}</h1>
               <p class="post--perex" v-html="post.data.perex" />
-              <PostInfo :post="post" />
+              <PostTags :post="$page.post" />
+              <PostInfo :post="$page.post" />
             </b-col>
             <b-col>
               <img :src="post.data.featured_image.url" class="img-fluid" />
@@ -26,6 +27,8 @@
 <script>
 import SlicesBlock from "~/components/SlicesBlock.vue";
 import PostInfo from "~/components/PostInfo.vue";
+import PostTags from "~/components/PostTags.vue";
+
 export default {
   metaInfo() {
     return {
@@ -46,6 +49,7 @@ export default {
   },
   components: {
     SlicesBlock,
+    PostTags,
     PostInfo
   },
   computed: {
@@ -73,6 +77,7 @@ img {
 <page-query>
   query PrismicPost ($id: ID!) {
     post: prismicPost (id: $id) {
+      tags,
       data {
           title
           author

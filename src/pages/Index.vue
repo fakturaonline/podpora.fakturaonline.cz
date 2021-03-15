@@ -7,6 +7,7 @@
             <b-col>
               <h1 class="featured--header">{{ featured.data.title }}</h1>
               <p class="featured--perex" v-html="featured.data.perex" />
+              <PostTags :post="featured" />
               <PostInfo :post="featured" />
             </b-col>
             <b-col>
@@ -25,28 +26,32 @@
     <b-container>
       <b-row>
         <b-col>
-          <a class="h3 mb-3 d-block" :href="$url('/aktuality')"
+          <a class="h3 mb-3 d-block category-title" :href="$url('/aktuality')"
             >Aktuality
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_news_aktuality" />
         </b-col>
         <b-col>
-          <a class="h3 mb-3 d-block" :href="$url('/novinky-z-aplikace')"
+          <a
+            class="h3 mb-3 d-block category-title"
+            :href="$url('/novinky-z-aplikace')"
             >Novinky z aplikace
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_news_from_app" />
         </b-col>
         <b-col>
-          <a class="h3 mb-3 d-block" :href="$url('/tipy-a-navody')"
+          <a
+            class="h3 mb-3 d-block category-title"
+            :href="$url('/tipy-a-navody')"
             >Tipy a návody
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_tuts" />
         </b-col>
         <b-col>
-          <a class="h3 mb-3 d-block" :href="$url('/ostatni')"
+          <a class="h3 mb-3 d-block category-title" :href="$url('/ostatni')"
             >Ostatní
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
@@ -66,6 +71,7 @@
 import PostCollection from "~/components/PostCollection.vue";
 import FirstPostFromCategory from "~/components/FirstPostFromCategory.vue";
 import PostInfo from "~/components/PostInfo.vue";
+import PostTags from "~/components/PostTags.vue";
 
 export default {
   metaInfo: {
@@ -73,6 +79,7 @@ export default {
   },
   components: {
     PostCollection,
+    PostTags,
     PostInfo,
     FirstPostFromCategory
   },
@@ -111,9 +118,11 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author
+          body
           perex
           featured_image {
             url
@@ -126,9 +135,11 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author
+          body
           perex
           featured_image {
             url
@@ -141,9 +152,11 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author
+          body
           perex
           featured_image {
             url
@@ -156,9 +169,11 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author
+          body
           perex
           featured_image {
             url
@@ -171,9 +186,11 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author
+          body
           perex
           featured_image {
             url
@@ -186,10 +203,12 @@ query Post {
     edges {
       node {
         id,
+        tags,
         data {
           title
           author
           date
+          body
           perex
           featured_image {
             url

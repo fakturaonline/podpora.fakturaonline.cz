@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="article-body-detail">
     <!-- Slice section template -->
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
       <template v-if="slice.slice_type === 'text'">
