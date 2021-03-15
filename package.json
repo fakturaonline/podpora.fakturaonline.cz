@@ -14,6 +14,7 @@
     "date-fns": "^2.19.0",
     "dotenv": "^8.2.0",
     "gridsome": "^0.7.13",
+    "gridsome-plugin-flexsearch": "^1.1.0",
     "marked": "^2.0.1",
     "prismic-dom": "^2.2.5",
     "prismic-javascript": "^3.0.2",

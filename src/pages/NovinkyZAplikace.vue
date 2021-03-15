@@ -32,7 +32,7 @@ query Post {
   posts: allPrismicPost(filter: { tags: { contains: ["Novinky z aplikace"] }}) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title

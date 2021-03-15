@@ -32,7 +32,7 @@ query Post {
   posts: allPrismicPost(filter: { tags: { contains: ["Tipy a návody"] }}) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
@@ -44,7 +44,6 @@ query Post {
           }
           body
         }
-
       }
     }
   }

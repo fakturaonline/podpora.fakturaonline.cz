@@ -33,6 +33,7 @@
                 size="sm"
                 class="mr-sm-2 search-box"
                 placeholder=""
+                v-model="searchTerm"
               ></b-form-input>
               <b-button size="sm" class="btn btn-light search-box-button">
                 <g-image alt="Search" src="~/search.svg" />
@@ -44,171 +45,51 @@
     </b-navbar>
 
     <div class="page-wrapper">
-      <slot />
+      <div v-if="searchTerm !== ''">
+        <b-container>
+          <h1 class="mt-4 mb-4">
+            Výsledky vyhledávání pro výraz: "{{ searchTerm }}"
+          </h1>
+          <h3 v-if="searchResults.length == 0">Nebyly nalezeny žádné články</h3>
+          <PostCollection :posts="searchResults" />
+        </b-container>
+      </div>
+      <div v-else>
+        <slot />
+      </div>
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__logo">
-            <a href="https://www.fakturaonline.cz/" target="_blank">
-              <g-image src="~/logo.png" />
-            </a>
-          </div>
-          <div class="footer-menu-wrapper">
-            <div class="footer-menu">
-              <div class="footer-menu__col">
-                <div class="footer-menu__item">
-                  <strong>Sledujte nás</strong>
-                  <div class="footer-menu__item">
-                    <a
-                      class="footer-menu__link"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://blog.fakturaonline.cz"
-                      >Blog</a
-                    >
-                  </div>
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.facebook.com/FakturaOnline"
-                    rel="noreferrer noopener"
-                    >Facebook</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.linkedin.com/company/fakturaonline-cz"
-                    rel="noreferrer noopener"
-                    >LinkedIn</a
-                  >
-                </div>
-              </div>
-              <div class="footer-menu__col">
-                <div class="footer-menu__item"><strong>Návody</strong></div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/vzory-faktur"
-                    >Vzory faktur</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/casto-kladene-dotazy"
-                    >Často kladené otázky</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/napoveda-k-tvorbe-pdf-faktury"
-                    >Nápověda</a
-                  >
-                </div>
-              </div>
-              <div class="footer-menu__col">
-                <div class="footer-menu__item">
-                  <strong>Důležité dokumenty</strong>
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/smluvni-podminky"
-                    >Smluvní podmínky</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/zasady-ochrany-osobnich-udaju"
-                    >Ochrana osobních údajů</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/cookie-policy"
-                    >Cookie Policy</a
-                  >
-                </div>
-              </div>
-              <div class="footer-menu__col">
-                <div class="footer-menu__item">
-                  <strong>Další informace</strong>
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/cenik"
-                    >Ceník</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/fakturace-pro-neziskove-organizace-zadarmo"
-                    >Neziskové organizace</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/kontaktujte-nas"
-                    >Kontaktujte nás</a
-                  >
-                </div>
-              </div>
-              <div class="footer-menu__col">
-                <div class="footer-menu__item">
-                  <strong>Pro vývojaře</strong>
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://api.fakturaonline.cz"
-                    >API</a
-                  >
-                </div>
-                <div class="footer-menu__item">
-                  <strong>Migrace faktur z</strong>
-                </div>
-                <div class="footer-menu__item">
-                  <a
-                    class="footer-menu__link"
-                    target="_blank"
-                    href="https://www.fakturaonline.cz/migrator/billapp"
-                    >BillApp</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer__lang-n-copy" style="display: none">
-            <div class="footer__copyright">
-              <a class="footer__brand" href="/"
-                >© 2021 <strong>FakturaOnline&nbsp;s.r.o.</strong></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
+
+<script>
+import Footer from "./Footer.vue";
+import PostCollection from "~/components/PostCollection.vue";
+
+export default {
+  data: () => ({
+    searchTerm: ""
+  }),
+
+  components: {
+    PostCollection,
+    Footer
+  },
+  computed: {
+    searchResults() {
+      const searchTerm = this.searchTerm;
+
+      if (searchTerm == "") return [];
+
+      const results = this.$search.search({ query: searchTerm, limit: 10 });
+
+      return results.map(result => {
+        const { path, tags, ...remainingObject } = result.node;
+
+        return { path, tags, data: remainingObject };
+      });
+    }
+  }
+};
+</script>

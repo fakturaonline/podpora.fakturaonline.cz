@@ -32,8 +32,8 @@ query Post {
   posts: allPrismicPost(filter: { tags: { contains: ["Aktuality"] }}) {
     edges {
       node {
-        id,
         tags,
+        path,
         data {
           title
           date

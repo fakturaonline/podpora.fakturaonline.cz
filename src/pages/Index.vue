@@ -11,7 +11,7 @@
               <PostInfo :post="featured" />
             </b-col>
             <b-col sm="auto" lg="6">
-              <g-link :to="`/articles/${featured.id}`">
+              <g-link :to="featured.path">
                 <img
                   :src="featured.data.featured_image.url"
                   class="img-fluid"
@@ -117,7 +117,7 @@ query Post {
   last_from_news_from_app: allPrismicPost(filter: { tags: { contains: ["Novinky z aplikace"] }}, order: DESC, limit: 1) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
@@ -135,7 +135,7 @@ query Post {
   last_from_news_aktuality: allPrismicPost(filter: { tags: { contains: ["Aktuality"] }}, order: DESC, limit: 1) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
@@ -153,7 +153,7 @@ query Post {
   last_from_others: allPrismicPost(filter: { tags: { contains: ["Ostatní"] }}, order: DESC, limit: 1) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
@@ -171,7 +171,7 @@ query Post {
   last_from_tuts: allPrismicPost(filter: { tags: { contains: ["Tipy a návody"] }}, order: DESC, limit: 1) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
@@ -189,7 +189,7 @@ query Post {
   featured: allPrismicPost(filter: { tags: { contains: ["Featured"] }}, order: DESC, limit: 1) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
@@ -207,7 +207,7 @@ query Post {
   latest: allPrismicPost(sortBy: "date", order: DESC, limit: 10) {
     edges {
       node {
-        id,
+        path,
         tags,
         data {
           title
