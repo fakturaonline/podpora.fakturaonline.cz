@@ -34,7 +34,7 @@
                 class="mr-sm-2 search-box"
                 placeholder=""
               ></b-form-input>
-              <b-button size="sm" class="btn btn-light">
+              <b-button size="sm" class="btn btn-light search-box-button">
                 <g-image alt="Search" src="~/search.svg" />
               </b-button>
             </b-nav-form>
