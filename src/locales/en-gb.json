@@ -20,5 +20,13 @@
     "enter_term": "Enter search term",
     "results_for": "Search results for expression",
     "no_results_found": "No articles found"
+  },
+  "meta": {
+    "index": "Blog",
+    "news": "News",
+    "news_from_app": "News from app",
+    "tips_and_tutorials": "Tips and tutorials",
+    "others": "Others",
+    "lastest_posts": "Latest posts"
   }
 }

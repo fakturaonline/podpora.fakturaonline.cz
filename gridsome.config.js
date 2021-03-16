@@ -1,8 +1,7 @@
 module.exports = {
-  siteName: "FakturaOnline",
-  siteDescription:
-    "Všechny novinky ze světa financí a fakturování na jednom místě",
-  siteUrl: "https://blog.fakturaonline.cz",
+  siteName: process.env.SITE_NAME,
+  siteDescription: process.env.SITE_DESCRIPTION,
+  siteUrl: process.env.SITE_URL,
   templates: {
     PrismicPost: "/articles/:slug"
   },
@@ -45,15 +44,14 @@ module.exports = {
     {
       use: "gridsome-plugin-i18n",
       options: {
-        locales: [
-          "cs-cz",
-          "en-gb"
-        ],
+        locales: ["cs-cz", "en-gb"],
         defaultLocale: process.env.PRISMIC_LOCALE,
         enablePathRewrite: false,
         rewriteDefaultLanguage: process.env.PRISMIC_LOCALE,
         messages: {
-          [process.env.PRISMIC_LOCALE]: require(`./src/locales/${process.env.PRISMIC_LOCALE}.json`)
+          [process.env.PRISMIC_LOCALE]: require(`./src/locales/${
+            process.env.PRISMIC_LOCALE
+          }.json`)
         }
       }
     }

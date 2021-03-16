@@ -11,8 +11,10 @@
 import PostCollection from "~/components/PostCollection.vue";
 
 export default {
-  metaInfo: {
-    title: "Tipy a návody"
+  metaInfo() {
+    return {
+      title: this.$i18n.t("meta.tips_and_tutorials")
+    };
   },
   components: {
     PostCollection

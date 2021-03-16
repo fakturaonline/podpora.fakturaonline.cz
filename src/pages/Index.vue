@@ -77,8 +77,10 @@ import PostInfo from "~/components/PostInfo.vue";
 import PostTags from "~/components/PostTags.vue";
 
 export default {
-  metaInfo: {
-    title: "Blog"
+  metaInfo() {
+    return {
+      title: this.$i18n.t("meta.index")
+    };
   },
   components: {
     PostCollection,

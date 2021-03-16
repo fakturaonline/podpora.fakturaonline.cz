@@ -11,8 +11,10 @@
 import PostCollection from "~/components/PostCollection.vue";
 
 export default {
-  metaInfo: {
-    title: "Novinky z aplikace"
+  metaInfo() {
+    return {
+      title: this.$i18n.t("meta.news_from_app")
+    };
   },
   components: {
     PostCollection

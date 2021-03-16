@@ -24,7 +24,6 @@ class PrismicSource {
 
   async loadCollections(addCollection) {
     // get all prismic docs
-    console.log(this.locale);
     const { results } = await this.prismic.query('', { lang : this.locale });
 
     // get all the types

@@ -11,8 +11,10 @@
 import PostCollection from "~/components/PostCollection.vue";
 
 export default {
-  metaInfo: {
-    title: "Aktuality"
+  metaInfo() {
+    return {
+      title: this.$i18n.t("meta.news")
+    };
   },
   components: {
     PostCollection
