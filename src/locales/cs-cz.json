@@ -28,5 +28,30 @@
     "tips_and_tutorials": "Tipy a návody",
     "others": "Ostatní",
     "lastest_posts": "Nejnovější články"
+  },
+  "footer": {
+    "important_documents": "Důležité dokumenty",
+    "follow_us": "Sledujte nás",
+    "tutorials": "Návody",
+    "invoice_samples": "Vzory faktur",
+    "faq": "Často kladené otázky",
+    "help": "Nápověda",
+    "terms_of_use": "Smluvní podmínky",
+    "privacy_policy": "Ochrana osobních údajů",
+    "cookie_policy": "Cookie Policy",
+    "more_information": "Další informace",
+    "price_list": "Ceník",
+    "contact_us": "Kontaktujte nás",
+    "for_developers": "Pro vývojaře",
+    "links": {
+      "templates": "vzory-faktur",
+      "faqs": "casto-kladene-dotazy",
+      "help": "napoveda-k-tvorbe-pdf-faktury",
+      "terms_of_use": "smluvni-podminky",
+      "privacy_policy": "zasady-ochrany-osobnich-udaju",
+      "cookie_policy": "cookie-policy",
+      "pricelist": "cenik",
+      "contact_us": "kontaktujte-nas"
+    }
   }
 }

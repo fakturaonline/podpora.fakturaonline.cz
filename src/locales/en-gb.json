@@ -28,5 +28,30 @@
     "tips_and_tutorials": "Tips and tutorials",
     "others": "Others",
     "lastest_posts": "Latest posts"
+  },
+  "footer": {
+    "important_documents": "Important documents",
+    "follow_us": "Follow us",
+    "tutorials": "Walkthroughs",
+    "invoice_samples": "Invoice samples",
+    "faq": "Frequently Asked Questions",
+    "help": "Help",
+    "terms_of_use": "Terms of Use",
+    "privacy_policy": "Privacy Policy",
+    "cookie_policy": "Cookie policy",
+    "more_information": "More information",
+    "price_list": "Price list",
+    "contact_us": "Contact us",
+    "for_developers": "For developers",
+    "links": {
+      "templates": "invoice-templates",
+      "faqs": "faq",
+      "help": "help-to-create-pdf-invoices",
+      "terms_of_use": "terms-of-use",
+      "privacy_policy": "privacy-policy",
+      "cookie_policy": "cookie-policy",
+      "pricelist": "pricelist",
+      "contact_us": "contact-us"
+    }
   }
 }

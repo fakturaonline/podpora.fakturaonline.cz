@@ -1,5 +1,5 @@
 module.exports = {
-  siteName: process.env.SITE_NAME,
+  siteName: process.env.SITE_NAME_TITLE,
   siteDescription: process.env.SITE_DESCRIPTION,
   siteUrl: process.env.SITE_URL,
   templates: {

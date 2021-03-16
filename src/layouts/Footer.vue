@@ -3,15 +3,15 @@
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__logo">
-          <a href="https://www.fakturaonline.cz/" target="_blank">
-            <g-image src="~/logo.png" />
+          <a :href="linkTo()" target="_blank">
+            <g-image :src="logoImage" />
           </a>
         </div>
         <div class="footer-menu-wrapper">
           <div class="footer-menu">
-            <div class="footer-menu__col">
+            <div class="footer-menu__col" v-if="$i18n.locale === 'cs-cz'">
               <div class="footer-menu__item">
-                <strong>Sledujte nás</strong>
+                <strong>{{ $t("footer.follow_us") }}</strong>
                 <div class="footer-menu__item">
                   <a
                     class="footer-menu__link"
@@ -42,74 +42,76 @@
               </div>
             </div>
             <div class="footer-menu__col">
-              <div class="footer-menu__item"><strong>Návody</strong></div>
+              <div class="footer-menu__item">
+                <strong>{{ $t("footer.tutorials") }}</strong>
+              </div>
               <div class="footer-menu__item">
                 <a
                   class="footer-menu__link"
                   target="_blank"
-                  href="https://www.fakturaonline.cz/vzory-faktur"
-                  >Vzory faktur</a
+                  :href="linkTo($t('footer.links.templates'))"
+                  >{{ $t("footer.invoice_samples") }}</a
                 >
               </div>
               <div class="footer-menu__item">
                 <a
                   class="footer-menu__link"
                   target="_blank"
-                  href="https://www.fakturaonline.cz/casto-kladene-dotazy"
-                  >Často kladené otázky</a
+                  :href="linkTo($t('footer.links.faqs'))"
+                  >{{ $t("footer.faq") }}</a
                 >
               </div>
               <div class="footer-menu__item">
                 <a
                   class="footer-menu__link"
                   target="_blank"
-                  href="https://www.fakturaonline.cz/napoveda-k-tvorbe-pdf-faktury"
-                  >Nápověda</a
-                >
-              </div>
-            </div>
-            <div class="footer-menu__col">
-              <div class="footer-menu__item">
-                <strong>Důležité dokumenty</strong>
-              </div>
-              <div class="footer-menu__item">
-                <a
-                  class="footer-menu__link"
-                  target="_blank"
-                  href="https://www.fakturaonline.cz/smluvni-podminky"
-                  >Smluvní podmínky</a
-                >
-              </div>
-              <div class="footer-menu__item">
-                <a
-                  class="footer-menu__link"
-                  target="_blank"
-                  href="https://www.fakturaonline.cz/zasady-ochrany-osobnich-udaju"
-                  >Ochrana osobních údajů</a
-                >
-              </div>
-              <div class="footer-menu__item">
-                <a
-                  class="footer-menu__link"
-                  target="_blank"
-                  href="https://www.fakturaonline.cz/cookie-policy"
-                  >Cookie Policy</a
+                  :href="linkTo($t('footer.links.help'))"
+                  >{{ $t("footer.help") }}</a
                 >
               </div>
             </div>
             <div class="footer-menu__col">
               <div class="footer-menu__item">
-                <strong>Další informace</strong>
+                <strong>{{ $t("footer.important_documents") }}</strong>
               </div>
               <div class="footer-menu__item">
                 <a
                   class="footer-menu__link"
                   target="_blank"
-                  href="https://www.fakturaonline.cz/cenik"
-                  >Ceník</a
+                  :href="linkTo($t('footer.links.terms_of_use'))"
+                  >{{ $t("footer.terms_of_use") }}</a
                 >
               </div>
               <div class="footer-menu__item">
+                <a
+                  class="footer-menu__link"
+                  target="_blank"
+                  :href="linkTo($t('footer.links.privacy_policy'))"
+                  >{{ $t("footer.privacy_policy") }}</a
+                >
+              </div>
+              <div class="footer-menu__item">
+                <a
+                  class="footer-menu__link"
+                  target="_blank"
+                  :href="linkTo($t('footer.links.cookie_policy'))"
+                  >{{ $t("footer.cookie_policy") }}</a
+                >
+              </div>
+            </div>
+            <div class="footer-menu__col">
+              <div class="footer-menu__item">
+                <strong>{{ $t("footer.more_information") }}</strong>
+              </div>
+              <div class="footer-menu__item">
+                <a
+                  class="footer-menu__link"
+                  target="_blank"
+                  :href="linkTo($t('footer.links.pricelist'))"
+                  >{{ $t("footer.price_list") }}</a
+                >
+              </div>
+              <div class="footer-menu__item" v-if="$i18n.locale === 'cs-cz'">
                 <a
                   class="footer-menu__link"
                   target="_blank"
@@ -121,14 +123,14 @@
                 <a
                   class="footer-menu__link"
                   target="_blank"
-                  href="https://www.fakturaonline.cz/kontaktujte-nas"
-                  >Kontaktujte nás</a
+                  :href="linkTo($t('footer.links.contact_us'))"
+                  >{{ $t("footer.contact_us") }}</a
                 >
               </div>
             </div>
             <div class="footer-menu__col">
               <div class="footer-menu__item">
-                <strong>Pro vývojaře</strong>
+                <strong>{{ $t("footer.for_developers") }}</strong>
               </div>
               <div class="footer-menu__item">
                 <a
@@ -138,10 +140,10 @@
                   >API</a
                 >
               </div>
-              <div class="footer-menu__item">
+              <div class="footer-menu__item" v-if="$i18n.locale === 'cs-cz'">
                 <strong>Migrace faktur z</strong>
               </div>
-              <div class="footer-menu__item">
+              <div class="footer-menu__item" v-if="$i18n.locale === 'cs-cz'">
                 <a
                   class="footer-menu__link"
                   target="_blank"
@@ -152,13 +154,6 @@
             </div>
           </div>
         </div>
-        <div class="footer__lang-n-copy" style="display: none">
-          <div class="footer__copyright">
-            <a class="footer__brand" href="/"
-              >© 2021 <strong>FakturaOnline&nbsp;s.r.o.</strong></a
-            >
-          </div>
-        </div>
       </div>
     </div>
   </footer>
@@ -166,6 +161,21 @@
 
 <script>
 export default {
-  name: "page-footer"
+  name: "page-footer",
+  computed: {
+    logoImage: function() {
+      return require("!!assets-loader?height=300!~/" +
+        `footer-logo-${this.$i18n.locale}.svg`);
+    }
+  },
+  methods: {
+    linkTo(path = "") {
+      const baseHost =
+        this.$i18n.locale === "cs-cz"
+          ? "https://www.fakturaonline.cz"
+          : "https://www.invoiceonline.com";
+      return `${baseHost}/${path}`;
+    }
+  }
 };
 </script>
