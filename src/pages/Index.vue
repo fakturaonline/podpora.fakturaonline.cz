@@ -26,8 +26,9 @@
     <b-container>
       <b-row>
         <b-col sm="6" lg="3">
-          <a class="h3 mb-3 d-block category-title" :href="$url('/aktuality')"
-            >Aktuality
+          <a class="h3 mb-3 d-block category-title" :href="$url('/aktuality')">
+            {{ $t("index.news") }}
+
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_news_aktuality" />
@@ -36,7 +37,8 @@
           <a
             class="h3 mb-3 d-block category-title"
             :href="$url('/novinky-z-aplikace')"
-            >Novinky z aplikace
+          >
+            {{ $t("index.news_from_app") }}
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_news_from_app" />
@@ -45,14 +47,15 @@
           <a
             class="h3 mb-3 d-block category-title"
             :href="$url('/tipy-a-navody')"
-            >Tipy a návody
+          >
+            {{ $t("index.tips_and_tutorials") }}
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_tuts" />
         </b-col>
         <b-col sm="6" lg="3">
-          <a class="h3 mb-3 d-block category-title" :href="$url('/ostatni')"
-            >Ostatní
+          <a class="h3 mb-3 d-block category-title" :href="$url('/ostatni')">
+            {{ $t("index.others") }}
             <g-image alt="Example image" src="~/chevron-right.svg" />
           </a>
           <FirstPostFromCategory :posts="last_from_others" />
@@ -61,7 +64,7 @@
     </b-container>
     <b-container>
       <hr />
-      <h2 class="mb-3 d-block">Nejnovější články</h2>
+      <h2 class="mb-3 d-block">{{ $t("index.lastest_posts") }}</h2>
       <PostCollection :posts="latest" />
     </b-container>
   </Layout>

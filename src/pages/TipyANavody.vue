@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <b-container>
-      <h1 class="mb-4 mt-5">Tipy a návody</h1>
+      <h1 class="mb-4 mt-5">{{ $t("index.tips_and_tutorials") }}</h1>
       <PostCollection :posts="posts" />
     </b-container>
   </Layout>

@@ -11,7 +11,6 @@
         <prismic-image :field="slice.primary.image" />
       </template>
       <template v-else-if="slice.slice_type === 'quote'">
-        <h1>quote</h1>
         <prismic-rich-text class="textslice" :field="slice.primary.quote" />
         <prismic-rich-text
           class="textslice"

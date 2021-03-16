@@ -1,0 +1,24 @@
+{
+  "index": {
+    "news": "Aktuality",
+    "news_from_app": "Novinky z aplikace",
+    "tips_and_tutorials": "Tipy a návody",
+    "others": "Ostatní",
+    "lastest_posts": "Nejnovější články"
+  },
+  "post_info": {
+    "from": "Od",
+    "min_reads": "min čtení"
+  },
+  "tags": {
+    "tipy-a-navody": "Tipy a návody",
+    "aktuality": "Aktuality",
+    "novinky-z-aplikace": "Novinky z aplikace",
+    "ostatni": "Ostatní"
+  },
+  "search": {
+    "enter_term": "Zadejte hledaný výraz",
+    "results_for": "Výsledky vyhledávání pro výraz",
+    "no_results_found": "Nebyly nalezeny žádné články"
+  }
+}

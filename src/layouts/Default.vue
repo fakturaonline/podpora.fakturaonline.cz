@@ -9,28 +9,32 @@
     >
       <b-container>
         <b-navbar-brand href="/">
-          <g-image alt="Example image" src="~/logo-fo.svg" width="200" />
+          <g-image alt="Blog FakturaOnline" :src="logoImage" width="200" />
         </b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item :href="$url('/aktuality')">Aktuality</b-nav-item>
-            <b-nav-item :href="$url('/novinky-z-aplikace')"
-              >Novinky z aplikace</b-nav-item
-            >
-            <b-nav-item :href="$url('/tipy-a-navody')"
-              >Tipy a návody</b-nav-item
-            >
-            <b-nav-item :href="$url('/ostatni')">Ostatní</b-nav-item>
+            <b-nav-item :href="$url('/aktuality')">{{
+              $t("index.news")
+            }}</b-nav-item>
+            <b-nav-item :href="$url('/novinky-z-aplikace')">{{
+              $t("index.news_from_app")
+            }}</b-nav-item>
+            <b-nav-item :href="$url('/tipy-a-navody')">{{
+              $t("index.tips_and_tutorials")
+            }}</b-nav-item>
+            <b-nav-item :href="$url('/ostatni')">{{
+              $t("index.others")
+            }}</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
             <b-input-group>
               <b-form-input
-                placeholder="Zadejte hledanvý výraz"
+                :placeholder="$t('search.enter_term')"
                 v-model="searchTerm"
                 class="search-box"
               >
@@ -48,9 +52,11 @@
       <div v-if="searchTerm !== ''">
         <b-container>
           <h1 class="mt-4 mb-4">
-            Výsledky vyhledávání pro výraz: "{{ searchTerm }}"
+            {{ $t("search.results_for") }}: "{{ searchTerm }}"
           </h1>
-          <h3 v-if="searchResults.length == 0">Nebyly nalezeny žádné články</h3>
+          <h3 v-if="searchResults.length == 0">
+            {{ $t("search.no_results_found") }}
+          </h3>
           <PostCollection :posts="searchResults" />
         </b-container>
       </div>
@@ -59,24 +65,27 @@
       </div>
     </div>
 
-    <Footer />
+    <PageFooter />
   </div>
 </template>
 
 <script>
-import Footer from "./Footer.vue";
+import PageFooter from "./Footer.vue";
 import PostCollection from "~/components/PostCollection.vue";
 
 export default {
   data: () => ({
     searchTerm: ""
   }),
-
   components: {
     PostCollection,
-    Footer
+    PageFooter
   },
   computed: {
+    logoImage: function() {
+      return require("!!assets-loader?width=200&quality=100&fit=inside!~/" +
+        `logo-fo-${this.$i18n.locale}.svg`);
+    },
     searchResults() {
       const searchTerm = this.searchTerm;
 
