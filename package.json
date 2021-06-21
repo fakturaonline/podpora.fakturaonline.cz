@@ -16,6 +16,7 @@
     "gridsome": "^0.7.13",
     "gridsome-plugin-flexsearch": "^1.1.0",
     "gridsome-plugin-i18n": "^1.6.0",
+    "gridsome-plugin-netlify-redirects": "^1.0.0",
     "marked": "^2.0.1",
     "prismic-dom": "^2.2.5",
     "prismic-javascript": "^3.0.2",
