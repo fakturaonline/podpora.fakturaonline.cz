@@ -1,0 +1,28 @@
+.btn {
+  color: $white;
+
+  .icon {
+    transform: scale(1.4) translateX(-.125rem);
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background-color: $blue-600;
+    border-color: $blue-600;
+  }
+}
+
+.btn-secondary {
+  &:hover {
+    background-color: $orange-600;
+    border-color: $orange-600;
+  }
+}
+
+.btn-lg {
+  font-weight: 700;
+  .icon {
+    transform: scale(1.4) translateX(-.25rem);
+  }
+}

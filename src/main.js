@@ -7,7 +7,9 @@ import format from "date-fns/format";
 
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
-import "~/assets/styles.scss";
+import "~/assets/css/styles.scss";
+
+import "~/assets/fonts/icons.woff2";
 
 // Then add it to export function
 
@@ -31,11 +33,6 @@ export default function(Vue, { head }) {
       return format(new Date(value), "dd.MM.yyyy");
     }
     return "";
-  });
-
-  head.link.push({
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Roboto"
   });
 
   Vue.component("Layout", DefaultLayout);

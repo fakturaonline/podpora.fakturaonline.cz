@@ -1,0 +1,32 @@
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: .875rem 2.5rem;
+  background-color: $blue-100;
+  border-radius: $border-radius-lg;
+
+  .btn {
+    margin-top: .9375rem;
+    margin-bottom: .9375rem;
+  }
+}
+
+.cta__content {
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.cta__text {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: $headings-line-height;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.125rem;
+  }
+}

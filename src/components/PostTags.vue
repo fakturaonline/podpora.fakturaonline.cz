@@ -4,7 +4,6 @@
       v-for="(tag, index) in displayTags"
       variant="secondary"
       :key="index"
-      class="mt-2 mb-2"
     >
       {{ $t(`tags.${tag}`) }}
     </b-badge>

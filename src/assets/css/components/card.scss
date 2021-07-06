@@ -1,0 +1,16 @@
+.card {
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .h4 {
+    font-size: $h3-font-size;
+  }
+
+  .postcard__content {
+    padding: 1.5625rem 1.875rem 3.75rem;
+  }
+
+  .link {
+    bottom: 1.875rem;
+  }
+}

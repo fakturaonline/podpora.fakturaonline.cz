@@ -1,9 +1,10 @@
 <template>
-  <small class="text-muted">
-    {{ $t("post_info.from") }}
-    {{ post.data.author }} | {{ post.data.date | formatDate }} |
-    {{ readingTime }} {{ $t("post_info.min_reads") }}</small
-  >
+  <div class="postinfo">
+    <small class="text-muted">
+      <span class="text-primary">{{ post.data.author }}</span>&nbsp;<span class="postinfo__divider"> · </span> {{ post.data.date | formatDate }} <span class="postinfo__divider">·</span>
+      {{ readingTime }} {{ $t("post_info.min_reads") }}</small
+    >
+  </div>
 </template>
 
 <script>

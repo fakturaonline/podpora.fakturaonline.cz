@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(post, index) in posts" :key="index" class="article-box">
+    <div v-for="(post, index) in posts" :key="index" class="article-preview">
       <PostCard :post="post" />
     </div>
   </div>

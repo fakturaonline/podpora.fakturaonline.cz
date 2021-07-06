@@ -1,13 +1,12 @@
 <template>
   <div>
     <b-navbar
-      toggleable="lg"
+      toggleable="xl"
       type="light"
       variant="white"
       :sticky="true"
-      class="shadow-sm"
     >
-      <b-container>
+      <b-container fluid="xl">
         <b-navbar-brand href="/">
           <g-image alt="Blog FakturaOnline" :src="logoImage" width="200" />
         </b-navbar-brand>
@@ -15,7 +14,7 @@
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
+          <b-navbar-nav class="navbar-navigation">
             <b-nav-item :href="$url('/aktuality')">{{
               $t("index.news")
             }}</b-nav-item>
@@ -31,8 +30,10 @@
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
-          <b-navbar-nav class="ml-auto">
-            <b-input-group>
+          <b-navbar-nav class="ml-auto navbar-search-and-cta">
+            <b-input-group
+              class="navbar-search"
+            >
               <b-form-input
                 :placeholder="$t('search.enter_term')"
                 v-model="searchTerm"
@@ -40,9 +41,13 @@
               >
               </b-form-input>
               <b-input-group-prepend class="search-box-button">
-                <g-image alt="Search" src="~/search.svg" />
+                <span class="icon icon-search"></span>
               </b-input-group-prepend>
             </b-input-group>
+            <a href="https://www.fakturaonline.cz/faktura" class="btn btn-secondary btn-sm">
+              <span class="icon icon-new-invoice"></span>
+              Vystavit fakturu
+            </a>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
@@ -50,7 +55,7 @@
 
     <div class="page-wrapper">
       <div v-if="searchTerm !== ''">
-        <b-container>
+        <b-container fluid="xl">
           <h1 class="mt-4 mb-4">
             {{ $t("search.results_for") }}: "{{ searchTerm }}"
           </h1>
@@ -64,7 +69,7 @@
         <slot />
       </div>
     </div>
-
+    <Cta />
     <PageFooter />
   </div>
 </template>
@@ -72,6 +77,7 @@
 <script>
 import PageFooter from "./Footer.vue";
 import PostCollection from "~/components/PostCollection.vue";
+import Cta from "~/components/Cta.vue";
 
 export default {
   data: () => ({
@@ -79,7 +85,8 @@ export default {
   }),
   components: {
     PostCollection,
-    PageFooter
+    PageFooter,
+    Cta
   },
   computed: {
     logoImage: function() {
@@ -102,3 +109,4 @@ export default {
   }
 };
 </script>
+

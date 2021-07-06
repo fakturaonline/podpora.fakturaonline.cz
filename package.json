@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "generate:icons": "icon-font-generator --html false --center --tag span src/assets/icons/*.svg -o src/assets/fonts --csspath src/assets/css/base/icons.scss --csstp src/assets/icons/template/css.hbs --cssfontsurl ../../assets/fonts/"
   },
   "dependencies": {
     "@prismicio/vue": "^2.0.11",
@@ -17,6 +18,7 @@
     "gridsome-plugin-flexsearch": "^1.1.0",
     "gridsome-plugin-i18n": "^1.6.0",
     "gridsome-plugin-netlify-redirects": "^1.0.0",
+    "icon-font-generator": "^2.1.11",
     "marked": "^2.0.1",
     "prismic-dom": "^2.2.5",
     "prismic-javascript": "^3.0.2",

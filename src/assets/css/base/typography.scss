@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+p {
+  font-size: .875rem;
+}
+
+a:hover {
+  color: $blue-500;
+  text-decoration: none;
+}
+
+.text-primary {
+  color: $blue-500 !important;
+}

@@ -1,19 +1,25 @@
 <template>
   <div>
     <g-link :to="post.path">
-      <img :src="post.data.featured_image.url" class="img-fluid mb-2" />
+      <img :src="post.data.featured_image.url" class="img-fluid" />
     </g-link>
-    <PostTags :post="post" />
+    <div class="postcard__content">
+      <PostTags :post="post" />
 
-    <g-link :to="post.path">
-      <div class="post-title">{{ post.data.title }}</div>
-    </g-link>
+      <g-link :to="post.path">
+        <h4 class="h4">{{ post.data.title }}</h4>
+      </g-link>
 
-    <p class="post--perex">
-      <g-link :to="post.path">{{ post.data.perex }}</g-link>
-    </p>
+      <PostInfo :post="post" />
 
-    <PostInfo :post="post" />
+      <p>{{ post.data.perex }}</p>
+
+      <g-link :to="post.path" class="link link--postcard">
+        <span>
+        Přečíst článek
+        </span>
+      </g-link>
+    </div>
   </div>
 </template>
 

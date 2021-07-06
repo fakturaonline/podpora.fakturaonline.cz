@@ -1,0 +1,91 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1162px
+);
+
+$white: #ffffff;
+
+$blue-100: #F4F9FC;
+$blue-200: #C9DFED;
+$blue-300: #94C0DC;
+$blue-400: #2980B9;
+$blue-500: #057EC2;
+$blue-600: #35759F;
+
+$orange-500: #FE8F01;
+$orange-600: #EC8C11;
+
+$gray-600: #6C757D;
+$gray-800: #333333;
+
+$primary: $blue-500;
+$secondary: $orange-500;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+  ),
+  $theme-colors
+);
+
+$body-color: $gray-700;
+$link-color: $gray-700;
+$headings-color: $gray-900;
+$link-hover-color: darken($link-color, 15%);
+$font-family-sans-serif: "Arial";
+
+$lead-font-size: 1rem;
+
+$border-radius: .25rem;
+$border-radius-lg: .5rem;
+
+$btn-padding-y-sm: .5rem;
+$btn-padding-x-sm: 1.25rem;
+$btn-font-size-sm: .875rem;
+
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 2.5rem;
+$btn-font-size-lg: 1.375rem;
+
+$input-placeholder-color: $blue-300;
+$input-plaintext-color: $blue-500;
+$input-font-size: .875rem;
+$input-padding-y: .75rem;
+$input-padding-x: .9375rem;
+
+$navbar-padding-y: .875rem;
+$navbar-light-color: $gray-800;
+$nav-link-padding-x: .625rem;
+
+$input-height: 2.5rem;
+
+$jumbotron-padding: 1.875rem;
+$jumbotron-bg: $blue-100;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.375rem;
+$h4-font-size: 1.125rem;
+$headings-font-weight: 700;
+$headings-color: $blue-500;
+$headings-line-height: 1.25;
+
+$small-font-size: .75rem;
+
+$line-height-base: 1.714;
+
+$link-color: $blue-500;
+$link-decoration: underline;
+
+$grid-gutter-width: 52px;
+
+$badge-font-size: 1rem;
+$badge-padding-y: 0;
+$badge-padding-x: 0;
+
+$card-border-width: 0;
+$card-border-radius: $border-radius-lg;

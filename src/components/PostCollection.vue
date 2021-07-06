@@ -1,13 +1,15 @@
 <template>
-  <b-row>
+  <b-row class="row--sm">
     <b-col
       md="6"
       sm="auto"
       v-for="(post, index) in posts"
       :key="index"
-      class="article-box"
+      class="col-flex col--sm"
     >
-      <PostCard :post="post" />
+      <div class="card">
+        <PostCard :post="post" />
+      </div>
     </b-col>
   </b-row>
 </template>

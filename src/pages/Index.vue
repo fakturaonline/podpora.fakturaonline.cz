@@ -1,14 +1,21 @@
 <template>
   <Layout>
-    <b-jumbotron class="mb-5 light-blue" lead-tag="div">
+    <b-jumbotron lead-tag="div">
       <template #lead>
-        <b-container>
+        <b-container fluid="xl">
           <b-row>
             <b-col sm="auto" lg="6">
-              <h1 class="featured--header">{{ featured.data.title }}</h1>
-              <p class="featured--perex" v-html="featured.data.perex" />
               <PostTags :post="featured" />
+              <g-link :to="featured.path">
+                <h1>{{ featured.data.title }}</h1>
+              </g-link>
               <PostInfo :post="featured" />
+              <p v-html="featured.data.perex" />
+              <g-link :to="featured.path" class="link">
+                <span>
+                Přečíst článek
+                </span>
+              </g-link>
             </b-col>
             <b-col sm="auto" lg="6">
               <g-link :to="featured.path">
@@ -23,50 +30,49 @@
       </template>
     </b-jumbotron>
 
-    <b-container>
-      <b-row>
-        <b-col sm="6" lg="3">
-          <a class="h3 mb-3 d-block category-title" :href="$url('/aktuality')">
-            {{ $t("index.news") }}
+    <section class="section">
+      <b-container fluid="xl">
+        <b-row>
+          <b-col sm="6" lg="3" class="col-post-from-category">
+            <a class="h3 d-block link link--category" :href="$url('/aktuality')">
+              <span class="link__underline">{{ $t("index.news") }}</span>
+            </a>
+            <FirstPostFromCategory :posts="last_from_news_aktuality" />
+          </b-col>
+          <b-col sm="6" lg="3" class="col-post-from-category">
+            <a
+              class="h3 d-block link link--category"
+              :href="$url('/novinky-z-aplikace')"
+            >
+              <span class="link__underline">{{ $t("index.news_from_app") }}</span>
+            </a>
+            <FirstPostFromCategory :posts="last_from_news_from_app" />
+          </b-col>
+          <b-col sm="6" lg="3" class="col-post-from-category">
+            <a
+              class="h3 d-block link link--category"
+              :href="$url('/tipy-a-navody')"
+            >
+              <span class="link__underline">{{ $t("index.tips_and_tutorials") }}</span>
+            </a>
+            <FirstPostFromCategory :posts="last_from_tuts" />
+          </b-col>
+          <b-col sm="6" lg="3" class="col-post-from-category">
+            <a class="h3 d-block link link--category" :href="$url('/ostatni')">
+              <span class="link__underline">{{ $t("index.others") }}</span>
+            </a>
+            <FirstPostFromCategory :posts="last_from_others" />
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
 
-            <g-image alt="Example image" src="~/chevron-right.svg" />
-          </a>
-          <FirstPostFromCategory :posts="last_from_news_aktuality" />
-        </b-col>
-        <b-col sm="6" lg="3">
-          <a
-            class="h3 mb-3 d-block category-title"
-            :href="$url('/novinky-z-aplikace')"
-          >
-            {{ $t("index.news_from_app") }}
-            <g-image alt="Example image" src="~/chevron-right.svg" />
-          </a>
-          <FirstPostFromCategory :posts="last_from_news_from_app" />
-        </b-col>
-        <b-col sm="6" lg="3">
-          <a
-            class="h3 mb-3 d-block category-title"
-            :href="$url('/tipy-a-navody')"
-          >
-            {{ $t("index.tips_and_tutorials") }}
-            <g-image alt="Example image" src="~/chevron-right.svg" />
-          </a>
-          <FirstPostFromCategory :posts="last_from_tuts" />
-        </b-col>
-        <b-col sm="6" lg="3">
-          <a class="h3 mb-3 d-block category-title" :href="$url('/ostatni')">
-            {{ $t("index.others") }}
-            <g-image alt="Example image" src="~/chevron-right.svg" />
-          </a>
-          <FirstPostFromCategory :posts="last_from_others" />
-        </b-col>
-      </b-row>
-    </b-container>
-    <b-container>
-      <hr />
-      <h2 class="mb-3 d-block">{{ $t("index.lastest_posts") }}</h2>
-      <PostCollection :posts="latest" />
-    </b-container>
+    <section class="section section--bg-blue">
+      <b-container fluid="xl">
+        <h2 class="h2">{{ $t("index.lastest_posts") }}</h2>
+        <PostCollection :posts="latest" />
+      </b-container>
+    </section>
   </Layout>
 </template>
 

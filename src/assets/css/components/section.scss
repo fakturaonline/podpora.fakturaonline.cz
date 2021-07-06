@@ -1,0 +1,16 @@
+.section {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  @include media-breakpoint-down(sm) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.section--bg-blue {
+  background-color: $blue-100;
+
+  .h2 {
+    margin-bottom: 2rem;
+  }
+}

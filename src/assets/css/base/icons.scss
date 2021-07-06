@@ -1,0 +1,51 @@
+@function icon($character){
+  @return unquote('\"') + unquote(str-insert($character,'\\', 1)) + unquote('\"');
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("../../assets/fonts/icons.eot?6d5cc0d32db86a30fdb0a67b7f9a1ceb?#iefix") format("embedded-opentype"),
+url("../../assets/fonts/icons.woff2?6d5cc0d32db86a30fdb0a67b7f9a1ceb") format("woff2"),
+url("../../assets/fonts/icons.woff?6d5cc0d32db86a30fdb0a67b7f9a1ceb") format("woff"),
+url("../../assets/fonts/icons.ttf?6d5cc0d32db86a30fdb0a67b7f9a1ceb") format("truetype"),
+url("../../assets/fonts/icons.svg?6d5cc0d32db86a30fdb0a67b7f9a1ceb#icons") format("svg");
+}
+
+@mixin icon {
+  display: inline-block;
+  font-family: icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+span[class^="icon"] {
+  display: inline-block;
+}
+
+span[class^="icon-"]::before, span[class*=" icon-"]::before {
+  display: inline-block;
+  font-family: icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-new-invoice::before {
+  content: icon(f101);
+}
+.icon-search::before {
+  content: icon(f102);
+}
+
+$icon-new-invoice: icon(f101);
+$icon-search: icon(f102);

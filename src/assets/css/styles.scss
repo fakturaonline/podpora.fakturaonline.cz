@@ -1,0 +1,35 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";
+
+@import "./base/variables.scss";
+@import "bootstrap/scss/bootstrap";
+
+@import "./base/icons.scss";
+@import "./base/layout.scss";
+@import "./base/typography.scss";
+
+@import "./components/article-preview.scss";
+@import "./components/badge.scss";
+@import "./components/btn.scss";
+@import "./components/card.scss";
+@import "./components/cta.scss";
+@import "./components/footer.scss";
+@import "./components/grid.scss";
+@import "./components/jumbotron.scss";
+@import "./components/link.scss";
+@import "./components/navbar.scss";
+@import "./components/postinfo.scss";
+@import "./components/search-box.scss";
+@import "./components/section.scss";
+
+.article-body-detail {
+  img {
+    max-width: 100%;
+  }
+}
+
+.post--perex a:hover {
+  text-decoration: none;
+  color: $body-color;
+}

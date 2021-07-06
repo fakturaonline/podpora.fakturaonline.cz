@@ -1,0 +1,18 @@
+.jumbotron {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  p {
+    font-size: .9375rem;
+    line-height: 1.6;
+  }
+
+  img {
+    border-radius: $border-radius-lg;
+  }
+
+  .badge {
+    font-size: 1rem;
+  }
+}
