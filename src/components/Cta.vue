@@ -4,16 +4,14 @@
       <div class="cta">
         <div class="cta__content">
           <g-image
-              :src="billIcon"
-              class="cta__icon"
-            />
-          <div class="cta__text">
-            Začněte fakturovat ZDARMA na <a href="https://www.fakturaonline.cz/faktura">FakturaOnline.cz</a>
-          </div>
+            :src="billIcon"
+            class="cta__icon"
+          />
+          <div v-html="$t('cta.text')" class="cta__text" />
         </div>
         <a href="https://www.fakturaonline.cz/faktura" class="btn btn-lg btn-secondary">
           <span class="icon icon-new-invoice"></span>
-          Vystavit fakturu
+          {{ $t("cta.cta") }}
         </a>
       </div>
     </b-container>

@@ -4,7 +4,8 @@
     "news_from_app": "Novinky z aplikace",
     "tips_and_tutorials": "Tipy a návody",
     "others": "Ostatní",
-    "lastest_posts": "Nejnovější články"
+    "lastest_posts": "Nejnovější články",
+    "read_article": "Přečíst článek"
   },
   "post_info": {
     "from": "Od",
@@ -15,6 +16,9 @@
     "aktuality": "Aktuality",
     "novinky-z-aplikace": "Novinky z aplikace",
     "ostatni": "Ostatní"
+  },
+  "navbar": {
+    "cta": "Vystavit fakturu"
   },
   "search": {
     "enter_term": "Zadejte hledaný výraz",
@@ -53,5 +57,15 @@
       "pricelist": "cenik",
       "contact_us": "kontaktujte-nas"
     }
+  },
+  "cta": {
+    "cta": "Vystavit fakturu",
+    "text": "Začněte fakturovat ZDARMA na <a href=\"https://www.fakturaonline.cz/faktura\">FakturaOnline.cz</a>"
+  },
+  "cta_aside": {
+    "claim": "Zdarma. Online. Za 30 vteřin.",
+    "cta": "Vystavit fakturu",
+    "name": "FakturaOnline.cz",
+    "text": "Fakturujte online, rychle a bezpečně"
   }
 }

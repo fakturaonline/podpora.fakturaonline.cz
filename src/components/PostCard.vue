@@ -16,7 +16,7 @@
 
       <g-link :to="post.path" class="link link--postcard">
         <span>
-        Přečíst článek
+        {{ $t("index.read_article") }}
         </span>
       </g-link>
     </div>

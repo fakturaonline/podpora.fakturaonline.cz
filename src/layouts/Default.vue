@@ -46,7 +46,7 @@
             </b-input-group>
             <a href="https://www.fakturaonline.cz/faktura" class="btn btn-secondary btn-sm">
               <span class="icon icon-new-invoice"></span>
-              Vystavit fakturu
+              {{ $t("navbar.cta") }}
             </a>
           </b-navbar-nav>
         </b-collapse>

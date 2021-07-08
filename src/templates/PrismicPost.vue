@@ -1,26 +1,22 @@
 <template>
   <Layout>
-    <b-jumbotron class="mb-5 light-blue" lead-tag="div">
-      <template #lead>
-        <b-container>
-          <b-row>
-            <b-col sm="auto" lg="6">
-              <h1 class="featured--header">{{ post.data.title }}</h1>
-              <p class="post--perex" v-html="post.data.perex" />
-              <PostTags :post="$page.post" />
-              <PostInfo :post="$page.post" />
-            </b-col>
-            <b-col sm="auto" lg="6">
-              <img :src="post.data.featured_image.url" class="img-fluid" />
-            </b-col>
-          </b-row>
+    <CtaAside />
+    <article class="article">
+      <div class="article__jumbotron">
+        <b-container class="container--article">
+          <div class="section section--article-jumbotron">
+            <PostTags :post="$page.post" />
+            <h1 class="h1">{{ post.data.title }}</h1>
+            <PostInfo :post="$page.post" />
+            <img :src="post.data.featured_image.url" class="article__lead-image" />
+          </div>
         </b-container>
-      </template>
-    </b-jumbotron>
-
-    <b-container>
-      <slices-block :slices="post.data.body" />
-    </b-container>
+      </div>
+      <b-container class="container--article">
+        <p class="article__perex" v-html="post.data.perex" />
+        <slices-block :slices="post.data.body" />
+      </b-container>
+    </article>
   </Layout>
 </template>
 
@@ -28,6 +24,7 @@
 import SlicesBlock from "~/components/SlicesBlock.vue";
 import PostInfo from "~/components/PostInfo.vue";
 import PostTags from "~/components/PostTags.vue";
+import CtaAside from "~/components/CtaAside.vue";
 
 export default {
   metaInfo() {
@@ -50,7 +47,8 @@ export default {
   components: {
     SlicesBlock,
     PostTags,
-    PostInfo
+    PostInfo,
+    CtaAside
   },
   computed: {
     post() {
@@ -59,20 +57,14 @@ export default {
       return {
         data: { ...remainingObject, body: JSON.parse(body) }
       };
-    }
+    },
+    billIcon: function() {
+      return require("!!assets-loader?width=57&quality=100&fit=inside!~/" +
+        `bill-icon.svg`);
+    },
   }
 };
 </script>
-
-<style scoped>
-img {
-  width: 100%;
-}
-
-.light-blue {
-  background-color: #f4f9fb;
-}
-</style>
 
 <page-query>
   query PrismicPost ($id: ID!) {

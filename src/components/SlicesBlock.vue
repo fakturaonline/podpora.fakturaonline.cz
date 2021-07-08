@@ -1,9 +1,8 @@
 <template>
-  <section class="article-body-detail">
-    <!-- Slice section template -->
+  <div class="article__content">
     <section v-for="(slice, index) in slices" :key="'slice-' + index">
       <template v-if="slice.slice_type === 'text'">
-        <div class="post-part single container">
+        <div class="post-part single">
           <prismic-rich-text class="textslice" :field="slice.primary.text" />
         </div>
       </template>
@@ -26,7 +25,7 @@
         </ul>
       </template>
     </section>
-  </section>
+  </div>
 </template>
 
 <script>

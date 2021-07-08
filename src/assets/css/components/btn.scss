@@ -1,8 +1,9 @@
 .btn {
   color: $white;
+  font-weight: 700;
 
   .icon {
-    transform: scale(1.4) translateX(-.125rem);
+    transform: scale(1.4) translateX(-.25rem) translateY(-.125rem);
   }
 }
 
@@ -17,6 +18,14 @@
   &:hover {
     background-color: $orange-600;
     border-color: $orange-600;
+  }
+}
+
+.btn-sm {
+  font-weight: 400;
+
+  .icon {
+    transform: scale(1.4) translateX(-.125rem);
   }
 }
 

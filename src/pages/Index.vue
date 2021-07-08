@@ -13,7 +13,7 @@
               <p v-html="featured.data.perex" />
               <g-link :to="featured.path" class="link">
                 <span>
-                Přečíst článek
+                {{ $t("index.read_article") }}
                 </span>
               </g-link>
             </b-col>
