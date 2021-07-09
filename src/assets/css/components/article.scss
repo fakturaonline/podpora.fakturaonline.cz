@@ -66,12 +66,14 @@
 }
 
 .article__lead-image {
+  width: calc(100% + 132px);
   max-width: calc(100% + 132px);
   margin-left: -66px;
   margin-right: -66px;
   border-radius: $border-radius-lg;
   @include media-breakpoint-down(sm) {
     max-width: calc(100% + 60px);
+    width: calc(100% + 60px);
     margin-left: -30px;
     margin-right: -30px;
   }
