@@ -4,7 +4,8 @@
     "news_from_app": "News from app",
     "tips_and_tutorials": "Tips and tutorials",
     "others": "Others",
-    "lastest_posts": "Latest posts"
+    "lastest_posts": "Latest posts",
+    "read_article": "Read article"
   },
   "post_info": {
     "from": "From",
@@ -15,6 +16,9 @@
     "aktuality": "News",
     "novinky-z-aplikace": "News from app",
     "ostatni": "Others"
+  },
+  "navbar": {
+    "cta": "Issue an invoice"
   },
   "search": {
     "enter_term": "Enter search term",
@@ -53,5 +57,15 @@
       "pricelist": "pricelist",
       "contact_us": "contact-us"
     }
+  },
+  "cta": {
+    "cta": "Issue an invoice",
+    "text": "Start using <a href=\"https://InvoiceOnline.com/\">InvoiceOnline.com</a>"
+  },
+  "cta_aside": {
+    "claim": "Free. Online. In 30 seconds.",
+    "cta": "Issue an invoice",
+    "name": "InvoiceOnline.com",
+    "text": "Invoice online, quickly and securely"
   }
 }
