@@ -59,3 +59,10 @@
     }
   }
 }
+
+.col-jumbotron-image {
+  @include media-breakpoint-down(lg) {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+}

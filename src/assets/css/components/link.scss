@@ -21,6 +21,9 @@
 
 .link--category {
   margin-bottom: 2rem;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1rem;
+  }
 }
 
 .link--postcard {

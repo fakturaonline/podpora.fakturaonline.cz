@@ -17,7 +17,7 @@
                 </span>
               </g-link>
             </b-col>
-            <b-col sm="auto" lg="6">
+            <b-col sm="auto" lg="6" class="col-jumbotron-image">
               <g-link :to="featured.path">
                 <img
                   :src="featured.data.featured_image.url"

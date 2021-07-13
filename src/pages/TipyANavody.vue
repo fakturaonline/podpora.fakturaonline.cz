@@ -2,7 +2,7 @@
   <Layout>
     <section class="section section--bg-blue">
       <b-container fluid="xl">
-        <h1 class="mb-4 mt-5">{{ $t("index.tips_and_tutorials") }}</h1>
+        <h1 class="mb-4">{{ $t("index.tips_and_tutorials") }}</h1>
         <PostCollection :posts="posts" />
       </b-container>
     </section>
