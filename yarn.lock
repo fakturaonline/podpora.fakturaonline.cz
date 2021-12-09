@@ -4234,6 +4234,13 @@ gridsome-plugin-flexsearch@^1.1.0:
     regenerator-runtime "^0.13.7"
     uuid "^8.3.1"
 
+gridsome-plugin-gtm@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-gtm/-/gridsome-plugin-gtm-0.1.1.tgz#9359b961a806c861d91ba056e5e117fe240219eb"
+  integrity sha512-74lUgH6QHUNPS3Ahz1CAx9RbKidMebaU6S7XCXtpVJn6lAc8Azep1Dkjf/oGdP7x5Ll7vPmZmVTbNlXlPKETjQ==
+  dependencies:
+    vue-gtm "^2.0.0"
+
 gridsome-plugin-i18n@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/gridsome-plugin-i18n/-/gridsome-plugin-i18n-1.6.0.tgz#6bb1456fa60a1be856a7bd0a04bea41f753db3e0"
@@ -9024,6 +9031,11 @@ url-parse@^1.4.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
+url-search-params-polyfill@^8.1.0:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/url-search-params-polyfill/-/url-search-params-polyfill-8.1.1.tgz#9e69e4dba300a71ae7ad3cead62c7717fd99329f"
+  integrity sha512-KmkCs6SjE6t4ihrfW9JelAPQIIIFbJweaaSLTh/4AO+c58JlDcb+GbdPt8yr5lRcFg4rPswRFRRhBGpWwh0K/Q==
+
 url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
@@ -9147,6 +9159,13 @@ vue-functional-data-merge@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
   integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
+
+vue-gtm@^2.0.0:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/vue-gtm/-/vue-gtm-2.3.4.tgz#19d5402853f90d4850a9d0042c184e5c6b91b1cf"
+  integrity sha512-09e5XMxnkqDt33lonKW0q2KCageK3d0vN5aA+IAMi4c3TKtpat86Y/DllhIeKWeLBoUT4elz+S+bVDHUGzUA2A==
+  dependencies:
+    url-search-params-polyfill "^8.1.0"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

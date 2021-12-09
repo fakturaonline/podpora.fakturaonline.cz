@@ -16,6 +16,7 @@
     "dotenv": "^8.2.0",
     "gridsome": "^0.7.13",
     "gridsome-plugin-flexsearch": "^1.1.0",
+    "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-i18n": "^1.6.0",
     "gridsome-plugin-netlify-redirects": "^1.0.0",
     "icon-font-generator": "^2.1.11",

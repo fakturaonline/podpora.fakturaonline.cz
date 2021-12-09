@@ -192,6 +192,14 @@ module.exports = {
           }.json`)
         }
       }
+    },
+        {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-TBGK39C',
+        enabled: true,
+        debug: false
+      }
     }
   ]
 };
