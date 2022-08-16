@@ -58,10 +58,10 @@
             <FirstPostFromCategory :posts="last_from_tuts" />
           </b-col>
           <b-col sm="6" lg="3" class="col-post-from-category">
-            <a class="h3 d-block link link--category" :href="$url('/ostatni')">
-              <span class="link__underline">{{ $t("index.others") }}</span>
+            <a class="h3 d-block link link--category" :href="$url('/dane')">
+              <span class="link__underline">{{ $t("index.taxes") }}</span>
             </a>
-            <FirstPostFromCategory :posts="last_from_others" />
+            <FirstPostFromCategory :posts="last_from_taxes" />
           </b-col>
         </b-row>
       </b-container>
@@ -107,8 +107,8 @@ export default {
     last_from_news_aktuality() {
       return this.$page.last_from_news_aktuality.edges.map(e => e.node);
     },
-    last_from_others() {
-      return this.$page.last_from_others.edges.map(e => e.node);
+    last_from_taxes() {
+      return this.$page.last_from_taxes.edges.map(e => e.node);
     },
     last_from_tuts() {
       return this.$page.last_from_tuts.edges.map(e => e.node);
@@ -161,7 +161,7 @@ query Post {
       }
     }
   }
-  last_from_others: allPrismicPost(filter: { tags: { contains: ["Ostatní"] }}, sortBy: "data.date", order: DESC, limit: 1) {
+  last_from_taxes: allPrismicPost(filter: { tags: { contains: ["Daně"] }}, sortBy: "data.date", order: DESC, limit: 1) {
     edges {
       node {
         path,

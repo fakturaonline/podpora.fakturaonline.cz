@@ -1,21 +1,23 @@
 {
   "index": {
+    "lastest_posts": "Latest posts",
     "news": "News",
     "news_from_app": "News from app",
-    "tips_and_tutorials": "Tips and tutorials",
     "others": "Others",
-    "lastest_posts": "Latest posts",
-    "read_article": "Read article"
+    "read_article": "Read article",
+    "taxes": "Taxes",
+    "tips_and_tutorials": "Tips and tutorials"
   },
   "post_info": {
     "from": "From",
     "min_reads": "min reads"
   },
   "tags": {
-    "tipy-a-navody": "Tips and tutorials",
     "aktuality": "News",
     "novinky-z-aplikace": "News from app",
-    "ostatni": "Others"
+    "ostatni": "Others",
+    "taxes": "Taxes",
+    "tipy-a-navody": "Tips and tutorials"
   },
   "navbar": {
     "cta": "Issue an invoice"
@@ -27,11 +29,12 @@
   },
   "meta": {
     "index": "Blog",
+    "lastest_posts": "Latest posts",
     "news": "News",
     "news_from_app": "News from app",
-    "tips_and_tutorials": "Tips and tutorials",
     "others": "Others",
-    "lastest_posts": "Latest posts"
+    "taxes": "Taxes",
+    "tips_and_tutorials": "Tips and tutorials"
   },
   "footer": {
     "important_documents": "Important documents",

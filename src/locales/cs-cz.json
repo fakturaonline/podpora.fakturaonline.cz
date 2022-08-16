@@ -1,21 +1,22 @@
 {
   "index": {
+    "lastest_posts": "Nejnovější články",
     "news": "Aktuality",
     "news_from_app": "Novinky z aplikace",
-    "tips_and_tutorials": "Tipy a návody",
-    "others": "Ostatní",
-    "lastest_posts": "Nejnovější články",
-    "read_article": "Přečíst článek"
+    "read_article": "Přečíst článek",
+    "taxes": "Daně",
+    "tips_and_tutorials": "Tipy a návody"
   },
   "post_info": {
     "from": "Od",
     "min_reads": "min čtení"
   },
   "tags": {
-    "tipy-a-navody": "Tipy a návody",
     "aktuality": "Aktuality",
     "novinky-z-aplikace": "Novinky z aplikace",
-    "ostatni": "Ostatní"
+    "ostatni": "Ostatní",
+    "taxes": "Daně",
+    "tipy-a-navody": "Tipy a návody"
   },
   "navbar": {
     "cta": "Vystavit fakturu"
@@ -27,11 +28,12 @@
   },
   "meta": {
     "index": "Blog",
+    "lastest_posts": "Nejnovější články",
     "news": "Aktuality",
     "news_from_app": "Novinky z aplikace",
-    "tips_and_tutorials": "Tipy a návody",
     "others": "Ostatní",
-    "lastest_posts": "Nejnovější články"
+    "taxes": "Daně",
+    "tips_and_tutorials": "Tipy a návody"
   },
   "footer": {
     "important_documents": "Důležité dokumenty",

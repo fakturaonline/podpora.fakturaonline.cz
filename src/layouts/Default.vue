@@ -24,8 +24,8 @@
             <b-nav-item :href="$url('/tipy-a-navody')">{{
               $t("index.tips_and_tutorials")
             }}</b-nav-item>
-            <b-nav-item :href="$url('/ostatni')">{{
-              $t("index.others")
+            <b-nav-item :href="$url('/dane')">{{
+              $t("index.taxes")
             }}</b-nav-item>
           </b-navbar-nav>
 
@@ -109,4 +109,3 @@ export default {
   }
 };
 </script>
-
