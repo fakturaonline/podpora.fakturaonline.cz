@@ -1,0 +1,86 @@
+{
+  "cta": {
+    "cta": "Zrób fakturę",
+    "text": "Zacznij wystawiać faktury ZA DARMO na <a href=\"https://www.onlinefakturowanie.pl/\">Onlinefakturowanie.pl</a>"
+  },
+  "cta_aside": {
+    "claim": "Darmo. \nOnline. \nZa 30 sekund.",
+    "cta": "Zrób fakturę",
+    "name": "Onlinefakturowanie.pl",
+    "text": "Rachuj online, szybko i bezpiecznie"
+  },
+  "footer": {
+    "contact_us": "Skontaktuj się z nami",
+    "cookie_policy": "Polityka Cookie",
+    "faq": "Często zadawane pytania",
+    "follow_us": "Obserwuj nas",
+    "for_developers": "Dla programistów",
+    "help": "Pomoc",
+    "important_documents": "Ważne dokumenty",
+    "invoice_samples": "Przykładowe faktury",
+    "links": {
+      "contact_us": "Skontaktuj się z nami",
+      "cookie_policy": "Polityka Cookie",
+      "faqs": "Często Zadawane Pytania",
+      "help": "podpowiedź-do-utworzenia-pdf-faktury",
+      "pricelist": "cennik",
+      "privacy_policy": "Polityka prywatności",
+      "templates": "próbki-faktury",
+      "terms_of_use": "zasady i warunki"
+    },
+    "more_information": "Więcej informacji",
+    "price_list": "Cennik",
+    "privacy_policy": "Ochrona danych osobowych",
+    "terms_of_use": "Zasady i warunki",
+    "tutorials": "Instrukcje"
+  },
+  "index": {
+    "aboutFo": "O Onlinefakturowanie.pl",
+    "invoiceIssuing": "Wystawianie faktur",
+    "lastest_posts": "Najnowszy",
+    "profileManagement": "ustawienia profilu",
+    "read_article": "Przeczytaj artykuł",
+    "support": "Wspierać się"
+  },
+  "meta": {
+    "about": "O Onlinefakturowanie",
+    "index": "Wspierać się",
+    "invoice_issuance": "Wystawianie faktur",
+    "lastest_posts": "Najnowszy",
+    "profile": "ustawienia profilu",
+    "support": "Wspierać się"
+  },
+  "navbar": {
+    "cta": "Zrób fakturę"
+  },
+  "post_info": {
+    "from": "Z",
+    "min_reads": "czytanie min"
+  },
+  "routes": {
+    "About": "/o-onlinefakturowanie/",
+    "InvoicesIssuing": "/wystawianie-faktur/",
+    "Profile": "/ustawienia-profilu/",
+    "Support": "/pomoc/"
+  },
+  "search": {
+    "enter_term": "Wpisz wyszukiwane hasło",
+    "no_results_found": "Nie znaleziono żadnych wyników",
+    "results_for": "Wyniki wyszukiwania terminu"
+  },
+  "siteName": "Wsparcie Faktura online",
+  "tags": {
+    "faqs": "FAQ",
+    "formaty-faktur": "Formaty faktur",
+    "o-fakturaonlinecz": "O Onlinefakturowanie.pl",
+    "podpora": "Wspierać się",
+    "prace-s-vystavenymi-fakturami": "Praca z wystawionymi fakturami",
+    "predplatne": "Subskrypcja",
+    "sprava-profilu": "ustawienia profilu",
+    "vystaveni": "Narażenie",
+    "vystavovani-faktur": "Wystawianie faktur",
+    "vzory-faktur": "Przykładowe faktury",
+    "zalozeni-uctu-a-jeho-sprava": "Tworzenie i zarządzanie kontem",
+    "zkusebni-obdobi": "Obszar próbny"
+  }
+}

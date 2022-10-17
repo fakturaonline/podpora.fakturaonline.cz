@@ -21,6 +21,28 @@ module.exports = {
       component: './src/pages/Support.vue'
     }
   ],
+  "pl": [
+    {
+      path: '/',
+      component: './src/pages/Index.vue'
+    },
+    {
+      path: '/o-onlinefakturowanie/',
+      component: './src/pages/About.vue'
+    },
+    {
+      path: '/ustawienia-profilu/',
+      component: './src/pages/Profile.vue'
+    },
+    {
+      path: '/wystawianie-faktur/',
+      component: './src/pages/InvoicesIssuing.vue'
+    },
+    {
+      path: '/pomoc/',
+      component: './src/pages/Support.vue'
+    }
+  ],
   "en-gb": [
     {
       path: '/',
