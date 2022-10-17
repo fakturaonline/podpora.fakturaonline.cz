@@ -18,50 +18,46 @@
               </g-link>
             </b-col>
             <b-col sm="auto" lg="6" class="col-jumbotron-image">
-              <g-link :to="featured.path">
-                <img
-                  :src="featured.data.featured_image.url"
-                  class="img-fluid"
-                />
-              </g-link>
             </b-col>
           </b-row>
         </b-container>
       </template>
     </b-jumbotron>
-
     <section class="section">
       <b-container fluid="xl">
         <b-row>
           <b-col sm="6" lg="3" class="col-post-from-category">
-            <a class="h3 d-block link link--category" :href="$url('/aktuality')">
-              <span class="link__underline">{{ $t("index.news") }}</span>
+            <a class="h3 d-block link link--category" :href="$t('routes.About')">
+              <span class="link__underline">{{ $t("index.aboutFo") }}</span>
             </a>
-            <FirstPostFromCategory :posts="last_from_news_aktuality" />
+            <FirstPostFromCategory :posts="last_from_invoice_issuing" />
           </b-col>
           <b-col sm="6" lg="3" class="col-post-from-category">
             <a
               class="h3 d-block link link--category"
-              :href="$url('/novinky-z-aplikace')"
+              :href="$t('routes.Profile')"
             >
-              <span class="link__underline">{{ $t("index.news_from_app") }}</span>
+              <span class="link__underline">{{ $t("index.profileManagement") }}</span>
             </a>
-            <FirstPostFromCategory :posts="last_from_news_from_app" />
+            <FirstPostFromCategory :posts="last_from_profile_management" />
           </b-col>
           <b-col sm="6" lg="3" class="col-post-from-category">
             <a
               class="h3 d-block link link--category"
-              :href="$url('/tipy-a-navody')"
+              :href="$t('routes.InvoicesIssuing')"
             >
-              <span class="link__underline">{{ $t("index.tips_and_tutorials") }}</span>
+              <span class="link__underline">{{ $t("index.invoiceIssuing") }}</span>
             </a>
-            <FirstPostFromCategory :posts="last_from_tuts" />
+            <FirstPostFromCategory :posts="last_from_invoice_issuing" />
           </b-col>
           <b-col sm="6" lg="3" class="col-post-from-category">
-            <a class="h3 d-block link link--category" :href="$url('/dane')">
-              <span class="link__underline">{{ $t("index.taxes") }}</span>
+            <a
+              class="h3 d-block link link--category"
+              :href="$t('routes.Support')"
+            >
+              <span class="link__underline">{{ $t("index.support") }}</span>
             </a>
-            <FirstPostFromCategory :posts="last_from_taxes" />
+            <FirstPostFromCategory :posts="last_from_support" />
           </b-col>
         </b-row>
       </b-container>
@@ -96,23 +92,23 @@ export default {
   },
   computed: {
     featured() {
-      return this.$page.featured.edges.map(e => e.node)[0];
+      return this.latest[0];
     },
     latest() {
       return this.$page.latest.edges.map(e => e.node);
     },
-    last_from_news_from_app() {
-      return this.$page.last_from_news_from_app.edges.map(e => e.node);
+    last_from_profile_management() {
+      return this.$page.last_from_profile_management.edges.map(e => e.node);
     },
-    last_from_news_aktuality() {
-      return this.$page.last_from_news_aktuality.edges.map(e => e.node);
+    last_from_invoice_issuing() {
+      return this.$page.last_from_invoice_issuing.edges.map(e => e.node);
     },
-    last_from_taxes() {
-      return this.$page.last_from_taxes.edges.map(e => e.node);
+    last_from_support() {
+      return this.$page.last_from_support.edges.map(e => e.node);
     },
-    last_from_tuts() {
-      return this.$page.last_from_tuts.edges.map(e => e.node);
-    }
+    last_from_about() {
+      return this.$page.last_from_about.edges.map(e => e.node);
+    },
   }
 };
 </script>
@@ -125,7 +121,7 @@ export default {
 
 <page-query>
 query Post {
-  last_from_news_from_app: allPrismicPost(filter: { tags: { contains: ["Novinky z aplikace"] }}, sortBy: "data.date", order: DESC, limit: 1) {
+  last_from_about: allPrismicPost(filter: { tags: { contains: ["Správa profilu"] }}, sortBy: "data.date", order: DESC, limit: 1) {
     edges {
       node {
         path,
@@ -136,14 +132,11 @@ query Post {
           author
           body
           perex
-          featured_image {
-            url
-          }
         }
       }
     }
   }
-  last_from_news_aktuality: allPrismicPost(filter: { tags: { contains: ["Aktuality"] }}, sortBy: "data.date", order: DESC, limit: 1) {
+  last_from_profile_management: allPrismicPost(filter: { tags: { contains: ["Správa profilu"] }}, sortBy: "data.date", order: DESC, limit: 1) {
     edges {
       node {
         path,
@@ -154,14 +147,11 @@ query Post {
           author
           body
           perex
-          featured_image {
-            url
-          }
         }
       }
     }
   }
-  last_from_taxes: allPrismicPost(filter: { tags: { contains: ["Daně"] }}, sortBy: "data.date", order: DESC, limit: 1) {
+  last_from_invoice_issuing: allPrismicPost(filter: { tags: { contains: ["Vystavování faktur"] }}, sortBy: "data.date", order: DESC, limit: 1) {
     edges {
       node {
         path,
@@ -172,14 +162,11 @@ query Post {
           author
           body
           perex
-          featured_image {
-            url
-          }
         }
       }
     }
   }
-  last_from_tuts: allPrismicPost(filter: { tags: { contains: ["Tipy a návody"] }}, sortBy: "data.date", order: DESC, limit: 1) {
+  last_from_support: allPrismicPost(filter: { tags: { contains: ["Podpora"] }}, sortBy: "data.date", order: DESC, limit: 1) {
     edges {
       node {
         path,
@@ -190,27 +177,6 @@ query Post {
           author
           body
           perex
-          featured_image {
-            url
-          }
-        }
-      }
-    }
-  }
-  featured: allPrismicPost(filter: { tags: { contains: ["Featured"] }}, sortBy: "data.date", order: DESC, limit: 1) {
-    edges {
-      node {
-        path,
-        tags,
-        data {
-          title
-          date
-          author
-          body
-          perex
-          featured_image {
-            url
-          }
         }
       }
     }
@@ -227,9 +193,6 @@ query Post {
           date
           body
           perex
-          featured_image {
-            url
-          }
         }
       }
     }

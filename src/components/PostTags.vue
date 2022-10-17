@@ -20,7 +20,7 @@ export default {
     displayTags() {
       return this.post.tags
         .filter(item => item !== "Featured")
-        .map(item => slugify(item, { lower: true }));
+        .map(item => slugify(item, { remove: /[*+~.()'"!:@]/g, lower: true }));
     }
   }
 };

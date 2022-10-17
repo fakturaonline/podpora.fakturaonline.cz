@@ -1,23 +1,35 @@
 {
   "index": {
     "lastest_posts": "Latest posts",
-    "news": "News",
-    "news_from_app": "News from app",
-    "others": "Others",
-    "read_article": "Read article",
-    "taxes": "Taxes",
-    "tips_and_tutorials": "Tips and tutorials"
+    "read_article": "Read",
+    "aboutFo": "About InvoiceOnline",
+    "profileManagement": "Profile settings",
+    "invoiceIssuing": "Issuance of invoices",
+    "support": "Support"
+  },
+  "routes": {
+    "About": "/about-invoiceonline/",
+    "Profile": "/profile-settings/",
+    "InvoicesIssuing": "/invoices-issuing/",
+    "Support": "/support/"
   },
   "post_info": {
     "from": "From",
     "min_reads": "min reads"
   },
   "tags": {
-    "aktuality": "News",
-    "novinky-z-aplikace": "News from app",
-    "ostatni": "Others",
-    "taxes": "Taxes",
-    "tipy-a-navody": "Tips and tutorials"
+    "faqs": "FAQ",
+    "o-fakturaonlinecz": "About InvoiceOnline",
+    "podpora": "Support",
+    "formaty-faktur": "Invoice formats",
+    "vzory-faktur": "Invoice tamplates",
+    "prace-s-vystavenymi-fakturami": "Work with issued invoices",
+    "predplatne": "Subscription",
+    "sprava-profilu": "Profile settings",
+    "vystaveni": "Issuance",
+    "vystavovani-faktur": "Issuance of invoices",
+    "zalozeni-uctu-a-jeho-sprava": "Account creation and management",
+    "zkusebni-obdobi": "Trial period"
   },
   "navbar": {
     "cta": "Issue an invoice"
@@ -28,13 +40,12 @@
     "no_results_found": "No articles found"
   },
   "meta": {
-    "index": "Blog",
+    "index": "Support",
     "lastest_posts": "Latest posts",
-    "news": "News",
-    "news_from_app": "News from app",
-    "others": "Others",
-    "taxes": "Taxes",
-    "tips_and_tutorials": "Tips and tutorials"
+    "about": "About InvoiceOnline",
+    "invoice_issuance": "Issuance of invoices",
+    "profile": "Profile settings",
+    "support": "Support"
   },
   "footer": {
     "important_documents": "Important documents",
@@ -70,5 +81,6 @@
     "cta": "Issue an invoice",
     "name": "InvoiceOnline.com",
     "text": "Invoice online, quickly and securely"
-  }
+  },
+  "siteName": "Support.InvoiceOnline"
 }

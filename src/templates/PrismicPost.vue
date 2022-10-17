@@ -8,7 +8,6 @@
             <PostTags :post="$page.post" />
             <h1 class="h1">{{ post.data.title }}</h1>
             <PostInfo :post="$page.post" />
-            <img :src="post.data.featured_image.url" class="article__lead-image" />
           </div>
         </b-container>
       </div>
@@ -33,12 +32,8 @@ export default {
       meta: [
         { name: "description", content: this.$page.post.data.perex },
         { property: "og:title", content: this.$page.post.data.title },
-        { property: "og:site_name", content: "Blog.FakturaOnline" },
+        { property: "og:site_name", content: this.$i18n.t("siteName") },
         { property: "og:type", content: "website" },
-        {
-          property: "og:image",
-          content: this.$page.post.data.featured_image.url
-        },
         { name: "robots", content: "index,follow" },
         { name: "author", content: this.$page.post.data.author }
       ]
@@ -75,9 +70,6 @@ export default {
           author
           date
           perex
-          featured_image {
-            url
-          }
           body
       }
     }

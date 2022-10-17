@@ -27,7 +27,7 @@ const transforSlicesMixin = {
   }
 };
 
-export default function(Vue, { head }) {
+export default function(Vue, { head, appOptions }) {
   Vue.filter("formatDate", value => {
     if (value) {
       return format(new Date(value), "dd.MM.yyyy");
@@ -48,4 +48,6 @@ export default function(Vue, { head }) {
   Object.entries(common).forEach(([_, component]) => {
     Vue.component(component.name, component);
   });
+
+  appOptions.i18n.setLocaleMessage(appOptions.i18n.locale, require(`./locales/${appOptions.i18n.locale}.json`));
 }

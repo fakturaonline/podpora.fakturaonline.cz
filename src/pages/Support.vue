@@ -2,7 +2,7 @@
   <Layout>
     <section class="section section--bg-blue">
       <b-container fluid="xl">
-        <h1 class="mb-4">{{ $t("index.news") }}</h1>
+        <h1 class="mb-4">{{ $t("meta.support") }}</h1>
         <PostCollection :posts="posts" />
       </b-container>
     </section>
@@ -15,7 +15,7 @@ import PostCollection from "~/components/PostCollection.vue";
 export default {
   metaInfo() {
     return {
-      title: this.$i18n.t("meta.news")
+      title: this.$i18n.t("meta.support")
     };
   },
   components: {
@@ -33,19 +33,16 @@ export default {
 
 <page-query>
 query Post {
-  posts: allPrismicPost(filter: { tags: { contains: ["Aktuality"] }}, sortBy: "data.date", order: DESC) {
+  posts: allPrismicPost(filter: { tags: { contains: ["Podpora"] }}, sortBy: "data.date", order: DESC) {
     edges {
       node {
-        tags,
         path,
+        tags,
         data {
           title
-          date
           author
+          date
           perex
-          featured_image {
-            url
-          }
           body
         }
       }

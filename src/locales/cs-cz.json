@@ -1,23 +1,35 @@
 {
   "index": {
-    "lastest_posts": "Nejnovější články",
-    "news": "Aktuality",
-    "news_from_app": "Novinky z aplikace",
+    "lastest_posts": "Nejnovější",
     "read_article": "Přečíst článek",
-    "taxes": "Daně",
-    "tips_and_tutorials": "Tipy a návody"
+    "aboutFo": "O Fakturaonline.cz",
+    "profileManagement": "Správa profilu",
+    "invoiceIssuing": "Vystavování faktur",
+    "support": "Podpora"
+  },
+  "routes": {
+    "About": "/o-fakturaonline/",
+    "Profile": "/sprava-profilu/",
+    "InvoicesIssuing": "/vystavovani-faktur/",
+    "Support": "/podpora/"
   },
   "post_info": {
     "from": "Od",
     "min_reads": "min čtení"
   },
   "tags": {
-    "aktuality": "Aktuality",
-    "novinky-z-aplikace": "Novinky z aplikace",
-    "ostatni": "Ostatní",
-    "taxes": "Daně",
-    "dane": "Daně",
-    "tipy-a-navody": "Tipy a návody"
+    "faqs": "FAQ",
+    "o-fakturaonlinecz": "O Fakturaonline.cz",
+    "formaty-faktur": "Formáty faktur",
+    "vzory-faktur": "Vzory faktur",
+    "podpora": "Podpora",
+    "prace-s-vystavenymi-fakturami": "Práce s vystavenými fakturami",
+    "predplatne": "Předplatné",
+    "sprava-profilu": "Správa profilu",
+    "vystaveni": "Vystavení",
+    "vystavovani-faktur": "Vystavování faktur",
+    "zalozeni-uctu-a-jeho-sprava": "Založení účtu a jeho správa",
+    "zkusebni-obdobi": "Zkušební obdbobí"
   },
   "navbar": {
     "cta": "Vystavit fakturu"
@@ -25,16 +37,15 @@
   "search": {
     "enter_term": "Zadejte hledaný výraz",
     "results_for": "Výsledky vyhledávání pro výraz",
-    "no_results_found": "Nebyly nalezeny žádné články"
+    "no_results_found": "Nebyly nalezeny žádné vvýsledky"
   },
   "meta": {
-    "index": "Blog",
-    "lastest_posts": "Nejnovější články",
-    "news": "Aktuality",
-    "news_from_app": "Novinky z aplikace",
-    "others": "Ostatní",
-    "taxes": "Daně",
-    "tips_and_tutorials": "Tipy a návody"
+    "index": "Podpora",
+    "lastest_posts": "Nejnovější",
+    "about": "O FakturaOnline",
+    "invoice_issuance": "Vystavování faktur",
+    "profile": "Správa profilu",
+    "support": "Podpora"
   },
   "footer": {
     "important_documents": "Důležité dokumenty",
@@ -70,5 +81,6 @@
     "cta": "Vystavit fakturu",
     "name": "FakturaOnline.cz",
     "text": "Fakturujte online, rychle a bezpečně"
-  }
+  },
+  "siteName": "Podpora.FakturaOnline"
 }

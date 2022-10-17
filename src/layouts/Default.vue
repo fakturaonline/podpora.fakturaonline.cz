@@ -15,17 +15,17 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="navbar-navigation">
-            <b-nav-item :href="$url('/aktuality')">{{
-              $t("index.news")
+            <b-nav-item :href="$t('routes.About')">{{
+              $t("index.aboutFo")
             }}</b-nav-item>
-            <b-nav-item :href="$url('/novinky-z-aplikace')">{{
-              $t("index.news_from_app")
+            <b-nav-item :href="$t('routes.Profile')">{{
+              $t("index.profileManagement")
             }}</b-nav-item>
-            <b-nav-item :href="$url('/tipy-a-navody')">{{
-              $t("index.tips_and_tutorials")
+            <b-nav-item :href="$t('routes.InvoicesIssuing')">{{
+              $t("index.invoiceIssuing")
             }}</b-nav-item>
-            <b-nav-item :href="$url('/dane')">{{
-              $t("index.taxes")
+            <b-nav-item :href="$t('routes.Support')">{{
+              $t("index.support")
             }}</b-nav-item>
           </b-navbar-nav>
 

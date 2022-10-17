@@ -1,8 +1,5 @@
 <template>
   <div>
-    <g-link :to="post.path">
-      <img :src="post.data.featured_image.url" class="img-fluid" />
-    </g-link>
     <div class="postcard__content">
       <PostTags :post="post" />
 

@@ -2,7 +2,7 @@
   <Layout>
     <section class="section section--bg-blue">
       <b-container fluid="xl">
-        <h1 class="mb-4">{{ $t("index.taxes") }}</h1>
+        <h1 class="mb-4">{{ $t("meta.invoice_issuance") }}</h1>
         <PostCollection :posts="posts" />
       </b-container>
     </section>
@@ -15,7 +15,7 @@ import PostCollection from "~/components/PostCollection.vue";
 export default {
   metaInfo() {
     return {
-      title: this.$i18n.t("meta.taxes")
+      title: this.$i18n.t("meta.invoice_issuance")
     };
   },
   components: {
@@ -33,7 +33,7 @@ export default {
 
 <page-query>
 query Post {
-  posts: allPrismicPost(filter: { tags: { contains: ["Daně"] }}, sortBy: "data.date", order: DESC) {
+  posts: allPrismicPost(filter: { tags: { contains: ["Vystavování faktur"] }}, sortBy: "data.date", order: DESC) {
     edges {
       node {
         path,
@@ -43,9 +43,6 @@ query Post {
           author
           date
           perex
-          featured_image {
-            url
-          }
           body
         }
       }
