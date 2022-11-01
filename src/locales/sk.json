@@ -1,0 +1,86 @@
+{
+  "cta": {
+    "cta": "Vystaviť faktúru",
+    "text": "Začnite fakturovať ZADARMO na <a href=\"https://www.fakturaonline.sk/\">FakturaOnline.sk</a>"
+  },
+  "cta_aside": {
+    "claim": "Zadarmo. \nOnline. \nZa 30 sekúnd.",
+    "cta": "Vystaviť faktúru",
+    "name": "FaktúraOnline.sk",
+    "text": "Fakturujte online, rýchlo a bezpečne"
+  },
+  "footer": {
+    "contact_us": "Kontaktujte nás",
+    "cookie_policy": "Cookie Policy",
+    "faq": "Často kladené otázky",
+    "follow_us": "Sledujte nás",
+    "for_developers": "Pre vývojárov",
+    "help": "Pomocník",
+    "important_documents": "Dôležité dokumenty",
+    "invoice_samples": "Vzory faktúr",
+    "links": {
+      "contact_us": "kontaktujte-nás",
+      "cookie_policy": "cookie-policy",
+      "faqs": "casto-kladené-otázky",
+      "help": "napoveda-k-tvorbe-pdf-faktúry",
+      "pricelist": "cenník",
+      "privacy_policy": "zasady-ochrany-osobnych-udajov",
+      "templates": "vzory-faktúr",
+      "terms_of_use": "zmluvne-podmienky"
+    },
+    "more_information": "Ďalšie informácie",
+    "price_list": "Cenník",
+    "privacy_policy": "Ochrana osobných údajov",
+    "terms_of_use": "Zmluvné podmienky",
+    "tutorials": "Návody"
+  },
+  "index": {
+    "aboutFo": "O Fakturaonline.sk",
+    "invoiceIssuing": "Vystavovanie faktúr",
+    "lastest_posts": "Najnovšie",
+    "profileManagement": "Správa profilu",
+    "read_article": "Prečítať článok",
+    "support": "Podpora"
+  },
+  "meta": {
+    "about": "O FaktúraOnline",
+    "index": "Podpora",
+    "invoice_issuance": "Vystavovanie faktúr",
+    "lastest_posts": "Najnovšie",
+    "profile": "Správa profilu",
+    "support": "Podpora"
+  },
+  "navbar": {
+    "cta": "Vystaviť faktúru"
+  },
+  "post_info": {
+    "from": "Od",
+    "min_reads": "min čítanie"
+  },
+  "routes": {
+    "About": "/o-fakturaonline/",
+    "InvoicesIssuing": "/vystavovanie-faktur/",
+    "Profile": "/sprava-profilu/",
+    "Support": "/podpora/"
+  },
+  "search": {
+    "enter_term": "Zadajte hľadaný výraz",
+    "no_results_found": "Neboli nájdené žiadne výsledky",
+    "results_for": "Výsledky vyhľadávania pre výraz"
+  },
+  "siteName": "Podpora.FaktúraOnline",
+  "tags": {
+    "faqs": "FAQ",
+    "formaty-faktur": "Formáty faktúr",
+    "o-fakturaonlinecz": "O Fakturaonline.sk",
+    "podpora": "Podpora",
+    "prace-s-vystavenymi-fakturami": "Práca s vystavenými faktúrami",
+    "predplatne": "Predplatné",
+    "sprava-profilu": "Správa profilu",
+    "vystaveni": "Vystavenie",
+    "vystavovani-faktur": "Vystavovanie faktúr",
+    "vzory-faktur": "Vzory faktúr",
+    "zalozeni-uctu-a-jeho-sprava": "Založenie účtu a jeho správa",
+    "zkusebni-obdobi": "Skúšobné obdbobie"
+  }
+}

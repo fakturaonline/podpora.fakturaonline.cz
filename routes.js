@@ -35,7 +35,7 @@ module.exports = {
       component: './src/pages/Profile.vue'
     },
     {
-      path: '/vystavovani-faktur/',
+      path: '/vystavovanie-faktur/',
       component: './src/pages/InvoicesIssuing.vue'
     },
     {
