@@ -1,7 +1,7 @@
 <template>
-  <div class="cta-aside">
+  <div class="cta-aside" v-if="visible">
     <div class="cta-aside__close">
-      <span class="icon icon-close"></span>
+      <span class="icon icon-close" @click="hide"></span>
     </div>
     <g-image
       :src="billIcon"
@@ -23,11 +23,22 @@
 <script>
 export default {
   name: "cta-aside",
+  data: () => ({
+    visible: true
+  }),
   computed: {
+    vidisble() {
+      this.visible === true;
+    },
     billIcon: function() {
       return require("!!assets-loader?width=57&quality=100&fit=inside!~/" +
         `bill-icon.svg`);
     },
+  },
+  methods: {
+    hide() {
+      this.visible = false
+    }
   }
 };
 </script>
