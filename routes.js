@@ -21,6 +21,28 @@ module.exports = {
       component: './src/pages/Support.vue'
     }
   ],
+  "sk": [
+    {
+      path: '/',
+      component: './src/pages/Index.vue'
+    },
+    {
+      path: '/o-fakturaonline/',
+      component: './src/pages/About.vue'
+    },
+    {
+      path: '/sprava-profilu/',
+      component: './src/pages/Profile.vue'
+    },
+    {
+      path: '/vystavovani-faktur/',
+      component: './src/pages/InvoicesIssuing.vue'
+    },
+    {
+      path: '/podpora/',
+      component: './src/pages/Support.vue'
+    }
+  ],
   "pl": [
     {
       path: '/',
