@@ -6,6 +6,17 @@ module.exports = {
     PrismicPost: "/articles/:slug"
   },
   plugins: [
+   {
+      use: require("./src/plugins/gridsome-plugin-sitemap"),
+      options: {
+         config: {
+          '/articles/*': {
+            changefreq: 'weekly',
+            priority: 0.8,
+          },
+        }
+      }
+    },
     {
       use: 'gridsome-plugin-netlify-redirects',
       options: {
@@ -15,7 +26,7 @@ module.exports = {
              from: "/articles/16-odklad-posledni-vlny-eet-v-roce-2020",
              to: "/articles/odklad-posledni-vlny-eet-v-roce-2020/",
              status: 302
-          },
+          }
         ]
       }
     },
@@ -60,17 +71,25 @@ module.exports = {
         defaultLocale: process.env.PRISMIC_LOCALE,
         enablePathRewrite: false,
         rewriteDefaultLanguage: process.env.PRISMIC_LOCALE,
-        messages: {},
         enablePathGeneration: false,
+        messages: {},
         routes: require('./routes.js')
       }
     },
-        {
+    {
       use: 'gridsome-plugin-gtm',
       options: {
         id: 'GTM-TBGK39C',
         enabled: true,
         debug: false
+      }
+    },
+    {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1300,
+        height: 900
       }
     }
   ]

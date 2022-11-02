@@ -8,6 +8,8 @@
     "generate:icons": "icon-font-generator --html false --center --tag span src/assets/icons/*.svg -o src/assets/fonts --csspath src/assets/css/base/icons.scss --csstp src/assets/icons/template/css.hbs --cssfontsurl ../../assets/fonts/"
   },
   "dependencies": {
+    "@gridsome/plugin-critical": "^0.2.0",
+    "@gridsome/plugin-sitemap": "^0.4.0",
     "@prismicio/vue": "^2.0.11",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.4.0",
